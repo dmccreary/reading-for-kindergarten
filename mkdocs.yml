@@ -17,21 +17,30 @@ nav:
 
   - Chapters:
     - Overview: chapters/index.md
-    # Add chapter entries here following this pattern:
-    # - Chapter 1 - Title:
-    #   - Content: chapters/01-chapter-name/index.md
-    #   - Quiz: chapters/01-chapter-name/quiz.md
+    - Chapter 1 - Getting Ready to Read: chapters/01-getting-ready-to-read/index.md
+    - Chapter 2 - Learning Uppercase Letters: chapters/02-learning-uppercase-letters/index.md
+    - Chapter 3 - Learning Lowercase Letters: chapters/03-learning-lowercase-letters/index.md
+    - Chapter 4 - Hearing Sounds in Words: chapters/04-hearing-sounds-in-words/index.md
+    - Chapter 5 - Consonant Sounds: chapters/05-consonant-sounds/index.md
+    - Chapter 6 - Vowel Sounds: chapters/06-vowel-sounds/index.md
+    - Chapter 7 - Connecting Letters and Sounds: chapters/07-connecting-letters-and-sounds/index.md
+    - Chapter 8 - Blending Sounds into Words: chapters/08-blending-sounds-into-words/index.md
+    - Chapter 9 - Learning Sight Words: chapters/09-learning-sight-words/index.md
+    - Chapter 10 - Practice and Assessment: chapters/10-practice-assessment-strategies/index.md
+    - Chapter 11 - Building Reading Skills: chapters/11-building-reading-skills/index.md
 
   - MicroSims:
     - List of MicroSims: sims/index.md
-    # Add MicroSim entries here:
-    # - Sim Name: sims/sim-name/index.md
+    - Graph Viewer: sims/graph-viewer/index.md
 
   - Learning Graph:
     - Introduction: learning-graph/index.md
-    # Add learning graph pages here:
-    # - Concept List: learning-graph/concept-list.md
-    # - Quality Metrics: learning-graph/quality-metrics.md
+    - Graph Viewer: sims/graph-viewer/index.md
+    - Course Description Assessment: learning-graph/course-description-assessment.md
+    - Concept List: learning-graph/concept-list.md
+    - Concept Taxonomy: learning-graph/concept-taxonomy.md
+    - Quality Metrics: learning-graph/quality-metrics.md
+    - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
 
   - Glossary: glossary.md
   - FAQ: faq.md
