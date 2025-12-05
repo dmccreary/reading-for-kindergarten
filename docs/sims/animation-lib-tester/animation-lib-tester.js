@@ -23,7 +23,8 @@ let animationTypes = [
   'Giggle Glitter Pop',
   'Storytime Spark Shower',
   'Bright Buddy Balloons',
-  'Reading Rocket Zoom'
+  'Reading Rocket Zoom',
+  'Baseball Explosion'
 ];
 
 // UI elements
@@ -120,6 +121,7 @@ function draw() {
   updateAndDrawStorytimeSparkShower();
   updateAndDrawBrightBuddyBalloons();
   updateAndDrawReadingRocketZoom();
+  updateAndDrawBaseballExplosion();
 
   // Draw control labels
   fill('black');
@@ -159,6 +161,7 @@ function triggerCelebration() {
   clearStorytimeSparkShower();
   clearBrightBuddyBalloons();
   clearReadingRocketZoom();
+  clearBaseballExplosion();
 
   // Trigger selected animation using shared module functions
   switch (type) {
@@ -194,6 +197,9 @@ function triggerCelebration() {
       break;
     case 'Reading Rocket Zoom':
       createReadingRocketZoom(canvasWidth, drawHeight, speedMultiplier);
+      break;
+    case 'Baseball Explosion':
+      createBaseballExplosion(canvasWidth / 2, drawHeight, speedMultiplier);
       break;
   }
 

@@ -17,6 +17,7 @@ Self-contained celebration animations for educational MicroSims. Each animation 
 | `storytime-spark-shower.js` | Storytime Spark Shower | Colorful sparks falling like rain |
 | `bright-buddy-balloons.js` | Bright Buddy Balloons | Colorful balloons floating upward |
 | `reading-rocket-zoom.js` | Reading Rocket Zoom | Rockets zooming across with flame trails |
+| `baseball-explosion.js` | Baseball Explosion | Baseballs exploding upward with red stitching |
 | `celebration-sounds.js` | Sound Effects | Optional audio feedback utilities |
 
 ## Quick Start
@@ -155,6 +156,12 @@ createReadingRocketZoom(areaWidth, areaHeight, speedMultiplier = 1.0)
 ```
 Rockets zoom across the screen from both sides.
 
+### Baseball Explosion
+```javascript
+createBaseballExplosion(centerX, startY, speedMultiplier = 1.0)
+```
+Baseballs explode upward from the center point with realistic red stitching.
+
 ## Sound Effects (Optional)
 
 Include `celebration-sounds.js` for audio feedback:
@@ -220,4 +227,5 @@ Each animation file is approximately 80-120 lines (~3-4 KB), making them lightwe
 | storytime-spark-shower.js | ~100 | ~3.2 KB |
 | bright-buddy-balloons.js | ~95 | ~3.0 KB |
 | reading-rocket-zoom.js | ~115 | ~3.6 KB |
+| baseball-explosion.js | ~120 | ~3.8 KB |
 | celebration-sounds.js | ~120 | ~3.5 KB |
