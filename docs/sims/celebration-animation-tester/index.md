@@ -14,6 +14,8 @@ social:
 
 [Run the Celebration Animation Tester Fullscreen](./main.html){ .md-button .md-button--primary }
 
+[Edit the Celebration Animation Tester using the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/KXtNUhezw)
+
 ## Sample iframe
 
 You can include this MicroSim on your website using the following `iframe`:
