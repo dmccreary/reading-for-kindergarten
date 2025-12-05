@@ -17,6 +17,7 @@ let particles = [];
 
 // Animation types
 let animationTypes = [
+  'Book Burst',
   'Yellow Stars',
   'Rainbow Sparkle Burst',
   'Happy Star Sprinkle',
@@ -26,8 +27,7 @@ let animationTypes = [
   'Giggle Glitter Pop',
   'Storytime Spark Shower',
   'Bright Buddy Balloons',
-  'Reading Rocket Zoom',
-  'Book Burst'
+  'Reading Rocket Zoom'
 ];
 
 // UI elements
