@@ -43,7 +43,8 @@
 
 iframe {
     width: 100%;
-    border: solid 2px var(--md-primary-fg-color);
+    /* border: solid 2px var(--md-primary-fg-color); */
+    border: solid 2px blue;
 }
 
 /* ============================================
