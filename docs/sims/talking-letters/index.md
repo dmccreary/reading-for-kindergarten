@@ -10,7 +10,7 @@ social:
 
 # Talking Letters
 
-<iframe src="main.html" height="452px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="395px" width="100%" scrolling="no"></iframe>
 
 [Run the Talking Letters MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
