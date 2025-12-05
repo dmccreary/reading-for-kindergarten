@@ -1,5 +1,7 @@
 # Welcome to Reading for Kindergarten
 
+![Cover Image](./img/cover.jpg)
+
 An intelligent textbook for teaching reading skills to kindergarten students.
 
 ## Getting Started

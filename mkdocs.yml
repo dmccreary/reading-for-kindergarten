@@ -51,8 +51,8 @@ nav:
 # Theme Configuration
 theme:
   name: material
-  # logo: img/logo.png  # Uncomment after adding your logo file
-  # favicon: img/favicon.ico  # Uncomment after adding your favicon file
+  logo: img/icon-192.png  # Uncomment after adding your logo file
+  favicon: img/favicon.ico  # Uncomment after adding your favicon file
   palette:
     # Primary color overridden in css/extra.css with custom brand color
     primary: 'custom'
