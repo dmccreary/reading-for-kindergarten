@@ -1,0 +1,103 @@
+{
+  "title": "Celebration Animation Tester",
+  "description": "A testbed showcasing 10 different celebration animations designed to reward student achievements in educational MicroSims. Animations include stars, sparkles, confetti, balloons, rockets, and more.",
+  "creator": "Claude AI",
+  "subject": ["Animation", "Educational Technology", "Gamification", "UI/UX"],
+  "date": "2025-12-05",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "gradeLevel": "All grades (development tool)",
+  "subjectArea": "Educational Technology",
+  "topic": "Celebration Animations for Positive Reinforcement",
+  "learningObjectives": [
+    "Demonstrate various celebration animation styles",
+    "Provide reusable animation code for other MicroSims",
+    "Showcase particle system techniques in p5.js"
+  ],
+  "bloomsTaxonomyLevels": ["Apply", "Create"],
+  "duration": "2-5 minutes",
+  "prerequisites": ["None for viewing; JavaScript knowledge for code reuse"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 470",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10 CDN", "Web Audio API"],
+  "accessibility": ["High contrast colors", "Audio feedback"],
+  "controls": [
+    {
+      "type": "dropdown",
+      "name": "animationSelect",
+      "description": "Select which celebration animation to preview",
+      "options": [
+        "Yellow Stars",
+        "Rainbow Sparkle Burst",
+        "Happy Star Sprinkle",
+        "Alphabet Fireworks",
+        "Super Reader Confetti",
+        "Magic Book Bloom",
+        "Giggle Glitter Pop",
+        "Storytime Spark Shower",
+        "Bright Buddy Balloons",
+        "Reading Rocket Zoom"
+      ],
+      "default": "Yellow Stars"
+    },
+    {
+      "type": "button",
+      "name": "celebrateButton",
+      "description": "Trigger the selected celebration animation"
+    }
+  ],
+  "animations": [
+    {
+      "name": "Yellow Stars",
+      "description": "Classic golden stars floating upward with rotation"
+    },
+    {
+      "name": "Rainbow Sparkle Burst",
+      "description": "Colorful sparkles exploding from center in rainbow colors"
+    },
+    {
+      "name": "Happy Star Sprinkle",
+      "description": "Smiling stars gently falling like sprinkles"
+    },
+    {
+      "name": "Alphabet Fireworks",
+      "description": "Letters shooting up and exploding like fireworks"
+    },
+    {
+      "name": "Super Reader Confetti",
+      "description": "Rectangular confetti in bright colors tumbling down"
+    },
+    {
+      "name": "Magic Book Bloom",
+      "description": "Glowing particles blooming outward like opening a magic book"
+    },
+    {
+      "name": "Giggle Glitter Pop",
+      "description": "Bouncy glitter circles that pop and multiply"
+    },
+    {
+      "name": "Storytime Spark Shower",
+      "description": "Gentle sparks falling like rain with trails"
+    },
+    {
+      "name": "Bright Buddy Balloons",
+      "description": "Colorful balloons floating upward"
+    },
+    {
+      "name": "Reading Rocket Zoom",
+      "description": "Rocket trails zooming across the screen"
+    }
+  ],
+  "modelType": "Particle system animations",
+  "assumptions": [
+    "Device supports Web Audio API for sound effects",
+    "Modern browser with canvas support"
+  ],
+  "limitations": [
+    "Development/testing tool, not a learning activity itself",
+    "Performance may vary on older devices with many particles"
+  ]
+}
