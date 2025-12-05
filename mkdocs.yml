@@ -70,7 +70,7 @@ theme:
     - navigation.indexes         # Section index pages
     - navigation.top             # Back to top button
     - navigation.footer          # Previous/next page links in footer
-    - navigation.tabs            # Top-level navigation tabs (optional)
+    # - navigation.tabs            # Top-level navigation tabs (optional)
     # - navigation.tabs.sticky   # Sticky tabs (optional)
 
     # Table of contents
