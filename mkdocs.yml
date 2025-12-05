@@ -37,7 +37,10 @@ nav:
     - Talking Letters: sims/talking-letters/index.md
     - Letter Hunt: sims/letter-hunt/index.md
     - Celebration Animation Tester: sims/celebration-animation-tester/index.md
-
+    - Animation Library Tester: sims/animation-lib-tester/index.md
+    - Shared Animation Library: sims/shared/animations/README.md
+  
+  
   - Learning Graph:
     - Introduction: learning-graph/index.md
     - Graph Viewer: sims/graph-viewer/index.md
@@ -50,6 +53,9 @@ nav:
   - Sample Prompts:
     - Overview: prompts/index.md
     - Cover Prompt: prompts/cover.md
+    - Generate Icon: prompts/icon.md
+    - Baseball Explosion Animation: prompts/create-baseball-explosion-celebration-animation.md
+  
   - Glossary: glossary.md
   - FAQ: faq.md
   - References: references.md
