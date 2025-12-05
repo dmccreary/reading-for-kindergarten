@@ -1207,23 +1207,26 @@
 <h1 id="talking-letters">Talking Letters<a class="headerlink" href="#talking-letters" title="Permanent link">&para;</a></h1>
 <iframe src="main.html" height="395px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Talking Letters MicroSim Fullscreen</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Talking Letters MicroSim Fullscreen</a>
+<a href="https://editor.p5js.org/dmccreary/sketches/cKV0beWYf">Edit the Talking Letters MicroSim using the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim<a class="headerlink" href="#about-this-microsim" title="Permanent link">&para;</a></h2>
 <p>This interactive alphabet display helps kindergarten students learn letter names by clicking on any letter to hear it spoken aloud. The MicroSim uses the Web Speech API built into modern browsers, requiring no external audio files.</p>
 <h2 id="how-to-use">How to Use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Click any letter</strong> to hear it spoken aloud</li>
 <li><strong>Watch the display</strong> - the letter appears large in the corner with animated sound waves</li>
-<li><strong>Toggle case</strong> - use the checkbox to switch between uppercase and lowercase letters</li>
+<li><strong>Toggle case</strong> - use the "Uppercase" checkbox to switch between lowercase and uppercase letters</li>
+<li><strong>Change voice</strong> - use the dropdown menu to select different voices (male/female, accents)</li>
 </ol>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>All 26 letters</strong> displayed in a responsive grid</li>
+<li><strong>All 26 letters</strong> displayed in a responsive grid that fills the available space</li>
 <li><strong>Text-to-speech</strong> using the browser's built-in Web Speech API</li>
+<li><strong>Voice selection</strong> - choose from available English voices (male, female, different accents)</li>
 <li><strong>Visual feedback</strong> - letters highlight when hovered and turn green when speaking</li>
 <li><strong>Large letter display</strong> shows the current letter being spoken</li>
 <li><strong>Animated sound waves</strong> indicate audio is playing</li>
-<li><strong>Case toggle</strong> to practice both uppercase and lowercase letters</li>
+<li><strong>Case toggle</strong> - defaults to lowercase with option to show uppercase</li>
 </ul>
 <h2 id="embedding-this-microsim">Embedding This MicroSim<a class="headerlink" href="#embedding-this-microsim" title="Permanent link">&para;</a></h2>
 <p>You can include this MicroSim on your website using the following <code>iframe</code>:</p>
@@ -1279,10 +1282,34 @@
 - Safari
 - Edge</p>
 <h3 id="voice-selection">Voice Selection<a class="headerlink" href="#voice-selection" title="Permanent link">&para;</a></h3>
-<p>The MicroSim uses the browser's default voice. Voice quality and accent may vary by:
-- Operating system (Windows, macOS, iOS, Android)
-- Browser
-- System language settings</p>
+<p>Users can select from available English voices using the dropdown menu. Available voices vary by platform:</p>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Example Voices</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>macOS</td>
+<td>Samantha, Alex, Victoria, Daniel</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>Microsoft David, Microsoft Zira</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>Google US English, Google UK English</td>
+</tr>
+<tr>
+<td>iOS/iPad</td>
+<td>Various Siri voices</td>
+</tr>
+</tbody>
+</table>
+<p>The dropdown filters for English-language voices only and displays them by name.</p>
 <h3 id="audio-settings">Audio Settings<a class="headerlink" href="#audio-settings" title="Permanent link">&para;</a></h3>
 <p>The speech is configured for young learners:
 - <strong>Rate</strong>: 0.8 (slightly slower than normal)
@@ -1292,8 +1319,9 @@
 <ol>
 <li><strong>Volume Check</strong>: Ensure classroom speakers or headphones are working before the lesson</li>
 <li><strong>First Click</strong>: Some browsers require a user interaction before audio plays - have students click any letter to start</li>
+<li><strong>Voice Selection</strong>: Try different voices to find one that students respond to best - some prefer female voices, others male</li>
 <li><strong>Repetition</strong>: Encourage students to click letters multiple times to reinforce learning</li>
-<li><strong>Lowercase Practice</strong>: Use the toggle to practice lowercase recognition after uppercase is mastered</li>
+<li><strong>Lowercase First</strong>: The MicroSim defaults to lowercase since these are more common in reading; use the Uppercase toggle when ready</li>
 <li><strong>Pair Work</strong>: Have students take turns - one clicks, one predicts the letter name</li>
 </ol>
 
