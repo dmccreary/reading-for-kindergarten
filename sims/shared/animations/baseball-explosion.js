@@ -61,11 +61,9 @@ function updateAndDrawBaseballExplosion() {
 
     // Draw the baseball
     push();
-    translate(p.x, p.y);
-    rotate(p.rotation);
-
-    drawBaseballBE(0, 0, p.size, p.alpha);
-
+      translate(p.x, p.y);
+      rotate(p.rotation);
+      drawBaseballBE(0, 0, p.size, p.alpha);
     pop();
 
     // Remove faded particles
