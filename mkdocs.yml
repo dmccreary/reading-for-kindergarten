@@ -3,7 +3,7 @@
 
 site_name: 'Reading for Kindergarten'
 site_description: 'An intelligent textbook for teaching reading skills to kindergarten students'
-site_author: 'Dan McCreary'
+site_author: 'Tara Gibbs'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/reading-for-kindergarten/'
 repo_url: 'https://github.com/dmccreary/reading-for-kindergarten'
@@ -31,7 +31,9 @@ nav:
 
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - List of Possible MicroSims: sims/possible-microsims.md
     - Graph Viewer: sims/graph-viewer/index.md
+    - Letter Matching Game: sims/letter-matching-game/index.md
 
   - Learning Graph:
     - Introduction: learning-graph/index.md
@@ -149,7 +151,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 # Copyright
-copyright: Copyright &copy; 2025 Dan McCreary. All rights reserved.
+copyright: Copyright &copy; 2025 Tara Gibbs. All rights reserved.
 
 # Extra configuration
 extra:
