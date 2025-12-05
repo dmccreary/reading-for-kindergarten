@@ -1,0 +1,48 @@
+{
+  "title": "Talking Letters",
+  "description": "An interactive alphabet where kindergarten students click on letters to hear them spoken aloud using the Web Speech API.",
+  "creator": "Dan McCreary",
+  "subject": ["Reading", "Letter Recognition", "Phonics", "Alphabet"],
+  "date": "2025-12-05",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "educational": {
+    "gradeLevel": "Kindergarten (ages 5-6)",
+    "subjectArea": "Reading",
+    "topic": "Letter Recognition and Letter Names",
+    "learningObjectives": [
+      "Recognize all 26 letters of the alphabet (uppercase and lowercase)",
+      "Associate the visual shape of each letter with its spoken name",
+      "Understand the difference between uppercase and lowercase letter forms"
+    ],
+    "bloomsTaxonomy": ["Remember", "Understand"],
+    "duration": "5-15 minutes",
+    "prerequisites": "None - designed for beginning readers"
+  },
+  "technical": {
+    "framework": "p5.js",
+    "canvasDimensions": "400x450 (initial)",
+    "responsive": "Width-responsive",
+    "dependencies": ["p5.js CDN", "Web Speech API (browser built-in)"],
+    "accessibility": ["Mouse/touch interaction", "Audio output", "High contrast colors", "Large text"]
+  },
+  "controls": [
+    {
+      "type": "checkbox",
+      "name": "Show lowercase",
+      "description": "Toggle between uppercase and lowercase letter display"
+    },
+    {
+      "type": "click",
+      "name": "Letter boxes",
+      "description": "Click any letter to hear it spoken aloud"
+    }
+  ],
+  "simulation": {
+    "modelType": "Interactive learning tool",
+    "variables": ["selectedLetter", "speakingLetter", "showLowercase"],
+    "assumptions": "Uses browser default voice for text-to-speech"
+  }
+}

@@ -34,6 +34,7 @@ nav:
     - List of Possible MicroSims: sims/possible-microsims.md
     - Graph Viewer: sims/graph-viewer/index.md
     - Letter Matching Game: sims/letter-matching-game/index.md
+    - Talking Letters: sims/talking-letters/index.md
 
   - Learning Graph:
     - Introduction: learning-graph/index.md
