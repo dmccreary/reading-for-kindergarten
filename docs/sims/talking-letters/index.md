@@ -13,6 +13,7 @@ social:
 <iframe src="main.html" height="395px" width="100%" scrolling="no"></iframe>
 
 [Run the Talking Letters MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+
 [Edit the Talking Letters MicroSim using the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/cKV0beWYf)
 
 ## About This MicroSim
