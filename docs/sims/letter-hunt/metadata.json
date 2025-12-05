@@ -1,0 +1,67 @@
+{
+  "title": "Letter Hunt",
+  "description": "An interactive search-and-find game where children identify and click target letters hidden among other letters to build visual discrimination and letter recognition skills.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Letter Recognition", "Visual Discrimination", "Early Literacy"],
+  "date": "2025-12-05",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "gradeLevel": "Kindergarten (Ages 5-6)",
+  "subjectArea": "English Language Arts",
+  "topic": "Letter Recognition",
+  "learningObjectives": [
+    "Identify specific letters among distractors",
+    "Distinguish between visually similar letters (b/d, p/q)",
+    "Develop systematic visual scanning strategies",
+    "Build fine motor skills through targeted clicking"
+  ],
+  "bloomsTaxonomyLevels": ["Remember", "Understand", "Apply"],
+  "duration": "5-10 minutes",
+  "prerequisites": ["Basic mouse/touch interaction skills", "Exposure to alphabet letters"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 470",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10 CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": ["Large touch targets (48px+)", "High contrast colors", "Audio feedback"],
+  "controls": [
+    {
+      "type": "dropdown",
+      "name": "difficultySelect",
+      "description": "Select difficulty level (Easy, Medium, Hard)",
+      "options": ["Easy", "Medium", "Hard"],
+      "default": "Easy"
+    },
+    {
+      "type": "button",
+      "name": "newGameButton",
+      "description": "Start a new game with a different target letter"
+    },
+    {
+      "type": "button",
+      "name": "speakButton",
+      "description": "Hear the target letter pronounced using text-to-speech"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "difficulty",
+      "description": "Controls letter density and use of confusable letter pairs",
+      "easy": "16 letters, 3 targets, distinct distractors",
+      "medium": "25 letters, 4 targets, mixed distractors",
+      "hard": "30 letters, 5 targets, confusable pairs prioritized (b/d, p/q, m/n)"
+    }
+  ],
+  "modelType": "Game-based learning",
+  "assumptions": [
+    "Students can use mouse or touch interface",
+    "Device supports Web Audio API for sound feedback",
+    "Device supports Web Speech API for letter pronunciation"
+  ],
+  "limitations": [
+    "Speech synthesis voice varies by browser/device",
+    "Does not track progress across sessions",
+    "Limited to uppercase letters only"
+  ]
+}

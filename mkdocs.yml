@@ -35,6 +35,8 @@ nav:
     - Graph Viewer: sims/graph-viewer/index.md
     - Letter Matching Game: sims/letter-matching-game/index.md
     - Talking Letters: sims/talking-letters/index.md
+    - Letter Hunt: sims/letter-hunt/index.md
+    - Celebration Animation Tester: sims/celebration-animation-tester/index.md
 
   - Learning Graph:
     - Introduction: learning-graph/index.md

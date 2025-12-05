@@ -42,7 +42,9 @@ Difficulty can scale by adjusting letter density, introducing visually similar l
 
 **Challenges:** Touch targets must be large enough for developing fine motor skills. Visually similar letters may frustrate some learners—consider progressive difficulty.
 
-**Status:** Proposed
+**Reusable Patterns:** This MicroSim includes celebration animations (sparkle effects, star particles) and audio feedback (correct ding, try-again tone, win fanfare) using Web Audio API that can be reused in other MicroSims.
+
+**Status:** [Go to Letter Hunt](./letter-hunt/index.md)
 
 ### Letter Tracing
 
