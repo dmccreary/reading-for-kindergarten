@@ -6,3 +6,7 @@
     They are in a bright and cheerful classroom surrounded by colorful toys and there are books everywhere.
     In the center is a teacher teaching them to read.
     They are all looking at her with wonderful smiles of happiness.
+
+## Google Nano Banana
+
+![](../img/cover.jpg)

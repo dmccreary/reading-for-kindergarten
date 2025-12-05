@@ -45,6 +45,9 @@ nav:
     - Quality Metrics: learning-graph/quality-metrics.md
     - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
 
+  - Sample Prompts:
+    - Overview: prompts/index.md
+    - Cover Prompt: prompts/cover.md
   - Glossary: glossary.md
   - FAQ: faq.md
   - References: references.md
