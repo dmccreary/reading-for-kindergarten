@@ -4,7 +4,7 @@
 
 // Canvas dimensions
 let canvasWidth = 400;
-let drawHeight = 450;
+let drawHeight = 380;
 let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
@@ -24,6 +24,10 @@ let attempts = 0;
 let gameComplete = false;
 let showCelebration = false;
 let celebrationTimer = 0;
+let showSadFace = false;
+let sadFaceTimer = 0;
+let showHappyFace = false;
+let happyFaceTimer = 0;
 
 // Card dimensions
 let cardWidth = 60;
@@ -87,6 +91,10 @@ function startNewGame() {
     attempts = 0;
     gameComplete = false;
     showCelebration = false;
+    showSadFace = false;
+    sadFaceTimer = 0;
+    showHappyFace = false;
+    happyFaceTimer = 0;
 
     // Create and shuffle cards
     let allUppercase = [];
@@ -173,8 +181,8 @@ function draw() {
         drawCard(card);
     }
 
-    // Draw connection line if card is selected
-    if (selectedCard) {
+    // Draw connection line if card is selected and not matched
+    if (selectedCard && !selectedCard.matched) {
         stroke(100, 100, 255, 150);
         strokeWeight(3);
         let cardCenterX = selectedCard.x + cardWidth / 2;
@@ -204,6 +212,16 @@ function draw() {
     // Celebration animation
     if (showCelebration) {
         drawCelebration();
+    }
+
+    // Sad face for wrong matches
+    if (showSadFace) {
+        drawSadFace();
+    }
+
+    // Happy face for correct matches
+    if (showHappyFace) {
+        drawHappyFace();
     }
 
     // Control labels
@@ -268,6 +286,70 @@ function drawCelebration() {
     if (celebrationTimer > 180) {
         showCelebration = false;
         celebrationTimer = 0;
+    }
+}
+
+function drawSadFace() {
+    sadFaceTimer++;
+
+    let faceX = canvasWidth - 50;
+    let faceY = drawHeight / 2;
+    let faceSize = 50;
+
+    // Face circle (yellow)
+    fill(255, 220, 100);
+    stroke(200, 170, 50);
+    strokeWeight(2);
+    ellipse(faceX, faceY, faceSize, faceSize);
+
+    // Eyes
+    fill(50);
+    noStroke();
+    ellipse(faceX - 10, faceY - 8, 6, 6);
+    ellipse(faceX + 10, faceY - 8, 6, 6);
+
+    // Sad mouth (arc curving down)
+    noFill();
+    stroke(50);
+    strokeWeight(3);
+    arc(faceX, faceY + 12, 20, 12, PI, TWO_PI);
+
+    // Hide after 1 second (60 frames at 60fps)
+    if (sadFaceTimer > 60) {
+        showSadFace = false;
+        sadFaceTimer = 0;
+    }
+}
+
+function drawHappyFace() {
+    happyFaceTimer++;
+
+    let faceX = canvasWidth - 50;
+    let faceY = drawHeight / 2;
+    let faceSize = 50;
+
+    // Face circle (yellow)
+    fill(255, 220, 100);
+    stroke(200, 170, 50);
+    strokeWeight(2);
+    ellipse(faceX, faceY, faceSize, faceSize);
+
+    // Eyes
+    fill(50);
+    noStroke();
+    ellipse(faceX - 10, faceY - 8, 6, 6);
+    ellipse(faceX + 10, faceY - 8, 6, 6);
+
+    // Happy mouth (arc curving up)
+    noFill();
+    stroke(50);
+    strokeWeight(3);
+    arc(faceX, faceY + 5, 20, 12, 0, PI);
+
+    // Hide after 1 second (60 frames at 60fps)
+    if (happyFaceTimer > 60) {
+        showHappyFace = false;
+        happyFaceTimer = 0;
     }
 }
 
@@ -354,12 +436,20 @@ function mouseReleased() {
             });
             score++;
 
+            // Show happy face for correct match
+            showHappyFace = true;
+            happyFaceTimer = 0;
+
             // Check for game completion
             if (score === currentLetterSet.length) {
                 gameComplete = true;
                 showCelebration = true;
                 celebrationTimer = 0;
             }
+        } else {
+            // Wrong match - show sad face
+            showSadFace = true;
+            sadFaceTimer = 0;
         }
     }
 
