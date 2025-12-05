@@ -1,3 +1,9 @@
+---
+title: Reading for Kindergarten
+description: An intelligent textbook for teaching reading skills to kindergarten students.
+image: /img/cover.jpg
+og:image: /img/cover.jpg
+---
 # Welcome to Reading for Kindergarten
 
 ![Cover Image](./img/cover.jpg)
