@@ -1,0 +1,89 @@
+{
+  "title": "Animation Library Tester",
+  "description": "A testbed demonstrating the shared animation library modules. Unlike the monolithic celebration-animation-tester, this version imports each animation as a separate reusable JavaScript module.",
+  "creator": "Claude AI",
+  "subject": ["Animation", "Educational Technology", "Modular Design", "Code Reuse"],
+  "date": "2025-12-05",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY-NC-SA 4.0",
+  "gradeLevel": "All grades (development tool)",
+  "subjectArea": "Educational Technology",
+  "topic": "Modular Animation Library for Positive Reinforcement",
+  "learningObjectives": [
+    "Demonstrate modular animation architecture",
+    "Show how to import and use shared animation modules",
+    "Provide example of code reuse patterns"
+  ],
+  "bloomsTaxonomyLevels": ["Apply", "Create"],
+  "duration": "2-5 minutes",
+  "prerequisites": ["None for viewing; JavaScript knowledge for code reuse"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 470",
+  "responsive": "Width-responsive",
+  "dependencies": [
+    "p5.js 1.11.10 CDN",
+    "Web Audio API",
+    "shared/animations/book-burst.js",
+    "shared/animations/yellow-stars.js",
+    "shared/animations/rainbow-sparkle-burst.js",
+    "shared/animations/happy-star-sprinkle.js",
+    "shared/animations/alphabet-fireworks.js",
+    "shared/animations/super-reader-confetti.js",
+    "shared/animations/magic-book-bloom.js",
+    "shared/animations/giggle-glitter-pop.js",
+    "shared/animations/storytime-spark-shower.js",
+    "shared/animations/bright-buddy-balloons.js",
+    "shared/animations/reading-rocket-zoom.js",
+    "shared/animations/celebration-sounds.js"
+  ],
+  "accessibility": ["High contrast colors", "Audio feedback"],
+  "controls": [
+    {
+      "type": "dropdown",
+      "name": "animationSelect",
+      "description": "Select which celebration animation to preview",
+      "options": [
+        "Book Burst",
+        "Yellow Stars",
+        "Rainbow Sparkle Burst",
+        "Happy Star Sprinkle",
+        "Alphabet Fireworks",
+        "Super Reader Confetti",
+        "Magic Book Bloom",
+        "Giggle Glitter Pop",
+        "Storytime Spark Shower",
+        "Bright Buddy Balloons",
+        "Reading Rocket Zoom"
+      ],
+      "default": "Book Burst"
+    },
+    {
+      "type": "dropdown",
+      "name": "speedSelect",
+      "description": "Control animation speed",
+      "options": ["Fast", "Medium", "Slow"],
+      "default": "Medium"
+    },
+    {
+      "type": "button",
+      "name": "celebrateButton",
+      "description": "Trigger the selected celebration animation"
+    }
+  ],
+  "modelType": "Modular particle system animations",
+  "assumptions": [
+    "Device supports Web Audio API for sound effects",
+    "Modern browser with canvas support",
+    "Shared animation modules are accessible via relative path"
+  ],
+  "limitations": [
+    "Development/testing tool, not a learning activity itself",
+    "Performance may vary on older devices with many particles",
+    "Requires shared/animations/ folder to be present"
+  ],
+  "relatedMicrosims": [
+    "celebration-animation-tester"
+  ]
+}
