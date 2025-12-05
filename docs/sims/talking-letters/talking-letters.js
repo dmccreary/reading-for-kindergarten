@@ -22,8 +22,13 @@ let selectedLetter = null;
 let speakingLetter = null;
 let showUppercase = false;
 
+// Voice settings
+let voices = [];
+let selectedVoice = null;
+
 // UI elements
 let caseToggle;
+let voiceSelect;
 
 // Colors
 let boxColor;
@@ -49,6 +54,23 @@ function setup() {
     caseToggle.changed(() => {
         showUppercase = caseToggle.checked();
     });
+
+    // Create voice selector dropdown
+    voiceSelect = createSelect();
+    voiceSelect.position(canvasWidth - 350, drawHeight + 12);
+    voiceSelect.style('font-size', '14px');
+    voiceSelect.style('padding', '4px');
+    voiceSelect.changed(() => {
+        let selectedName = voiceSelect.value();
+        selectedVoice = voices.find(v => v.name === selectedName) || null;
+    });
+
+    // Load available voices
+    loadVoices();
+    // Chrome loads voices asynchronously
+    if (speechSynthesis.onvoiceschanged !== undefined) {
+        speechSynthesis.onvoiceschanged = loadVoices;
+    }
 
     // Create letter boxes
     createLetterBoxes();
@@ -204,6 +226,32 @@ function drawSoundWaves(x, y, baseSize) {
     }
 }
 
+function loadVoices() {
+    voices = speechSynthesis.getVoices();
+
+    // Filter for English voices only
+    let englishVoices = voices.filter(v => v.lang.startsWith('en'));
+
+    // Clear existing options
+    voiceSelect.elt.innerHTML = '';
+
+    // Add voices to dropdown
+    for (let voice of englishVoices) {
+        // Create a friendly label
+        let label = voice.name;
+        // Shorten long names
+        if (label.length > 25) {
+            label = label.substring(0, 22) + '...';
+        }
+        voiceSelect.option(label, voice.name);
+    }
+
+    // Select first voice by default
+    if (englishVoices.length > 0 && !selectedVoice) {
+        selectedVoice = englishVoices[0];
+    }
+}
+
 function speakLetter(letter) {
     // Cancel any ongoing speech
     speechSynthesis.cancel();
@@ -211,6 +259,11 @@ function speakLetter(letter) {
     // Create utterance
     let textToSpeak = showUppercase ? letter : letter.toLowerCase();
     let utterance = new SpeechSynthesisUtterance(textToSpeak);
+
+    // Use selected voice if available
+    if (selectedVoice) {
+        utterance.voice = selectedVoice;
+    }
 
     // Configure voice settings for clarity
     utterance.rate = 0.8;  // Slightly slower for young learners
@@ -268,6 +321,11 @@ function updateCanvasSize() {
             cols = 7;
         } else {
             cols = 9;
+        }
+
+        // Reposition voice selector
+        if (typeof voiceSelect !== 'undefined') {
+            voiceSelect.position(canvasWidth - 250, drawHeight + 12);
         }
 
         // Recreate letter boxes if they exist (box size calculated in createLetterBoxes)

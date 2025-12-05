@@ -13,6 +13,7 @@ social:
 <iframe src="main.html" height="395px" width="100%" scrolling="no"></iframe>
 
 [Run the Talking Letters MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Edit the Talking Letters MicroSim using the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/cKV0beWYf)
 
 ## About This MicroSim
 
@@ -22,16 +23,18 @@ This interactive alphabet display helps kindergarten students learn letter names
 
 1. **Click any letter** to hear it spoken aloud
 2. **Watch the display** - the letter appears large in the corner with animated sound waves
-3. **Toggle case** - use the checkbox to switch between uppercase and lowercase letters
+3. **Toggle case** - use the "Uppercase" checkbox to switch between lowercase and uppercase letters
+4. **Change voice** - use the dropdown menu to select different voices (male/female, accents)
 
 ## Features
 
-- **All 26 letters** displayed in a responsive grid
+- **All 26 letters** displayed in a responsive grid that fills the available space
 - **Text-to-speech** using the browser's built-in Web Speech API
+- **Voice selection** - choose from available English voices (male, female, different accents)
 - **Visual feedback** - letters highlight when hovered and turn green when speaking
 - **Large letter display** shows the current letter being spoken
 - **Animated sound waves** indicate audio is playing
-- **Case toggle** to practice both uppercase and lowercase letters
+- **Case toggle** - defaults to lowercase with option to show uppercase
 
 ## Embedding This MicroSim
 
@@ -89,10 +92,16 @@ The Web Speech API is supported in all modern browsers:
 - Edge
 
 ### Voice Selection
-The MicroSim uses the browser's default voice. Voice quality and accent may vary by:
-- Operating system (Windows, macOS, iOS, Android)
-- Browser
-- System language settings
+Users can select from available English voices using the dropdown menu. Available voices vary by platform:
+
+| Platform | Example Voices |
+|----------|---------------|
+| macOS | Samantha, Alex, Victoria, Daniel |
+| Windows | Microsoft David, Microsoft Zira |
+| Chrome | Google US English, Google UK English |
+| iOS/iPad | Various Siri voices |
+
+The dropdown filters for English-language voices only and displays them by name.
 
 ### Audio Settings
 The speech is configured for young learners:
@@ -104,6 +113,7 @@ The speech is configured for young learners:
 
 1. **Volume Check**: Ensure classroom speakers or headphones are working before the lesson
 2. **First Click**: Some browsers require a user interaction before audio plays - have students click any letter to start
-3. **Repetition**: Encourage students to click letters multiple times to reinforce learning
-4. **Lowercase Practice**: Use the toggle to practice lowercase recognition after uppercase is mastered
-5. **Pair Work**: Have students take turns - one clicks, one predicts the letter name
+3. **Voice Selection**: Try different voices to find one that students respond to best - some prefer female voices, others male
+4. **Repetition**: Encourage students to click letters multiple times to reinforce learning
+5. **Lowercase First**: The MicroSim defaults to lowercase since these are more common in reading; use the Uppercase toggle when ready
+6. **Pair Work**: Have students take turns - one clicks, one predicts the letter name
