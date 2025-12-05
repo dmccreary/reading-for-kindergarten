@@ -108,5 +108,5 @@ Positive reinforcement through visual celebration helps:
 
 ## See Also
 
-- [Shared Animation Library Documentation](../shared/animations/)
-- [Original Celebration Animation Tester](../celebration-animation-tester/)
+- [Shared Animation Library Documentation](../shared/animations/index.md)
+- [Original Celebration Animation Tester](../celebration-animation-tester/index.md)
