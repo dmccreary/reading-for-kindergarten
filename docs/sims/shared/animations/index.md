@@ -208,7 +208,7 @@ function draw() {
 
 ## Testing
 
-Use the [Celebration Animation Tester](../celebration-animation-tester/) MicroSim to preview all animations and experiment with different speeds.
+Use the [Celebration Animation Tester](../celebration-animation-tester/index.md) MicroSim to preview all animations and experiment with different speeds.
 
 ## File Sizes
 
