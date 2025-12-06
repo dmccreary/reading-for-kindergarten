@@ -168,7 +168,8 @@ copyright: Copyright &copy; 2025 Tara Gibbs. All rights reserved.
 # Extra configuration
 extra:
   generator: false               # Hide "Made with Material" footer
-    
+  
+  # Google Analytics
   analytics:
     provider: google
-    property: GG-XSSR4EPN2B
+    property: G-XSSR4EPN2B
