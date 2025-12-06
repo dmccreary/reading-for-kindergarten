@@ -168,11 +168,7 @@ copyright: Copyright &copy; 2025 Tara Gibbs. All rights reserved.
 # Extra configuration
 extra:
   generator: false               # Hide "Made with Material" footer
-  # Social links (optional)
-  social:
-    - icon: fontawesome/brands/github
-      link: 'https://github.com/dmccreary/reading-for-kindergarten'
-    # - icon: fontawesome/brands/twitter
-    #   link: https://twitter.com/username
-    # - icon: fontawesome/brands/linkedin
-    #   link: https://linkedin.com/in/username
+    
+  analytics:
+    provider: google
+    property: GG-XSSR4EPN2B

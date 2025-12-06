@@ -75,3 +75,16 @@ Positive reinforcement through visual celebration helps:
 - **Achievement Recognition** - Students feel proud of accomplishments
 - **Emotional Connection** - Fun animations create positive associations with learning
 - **Memory Enhancement** - Memorable celebrations help encode learning experiences
+
+## Technical Terminology
+
+These animations are known by various names in different fields:
+
+- **Juicy feedback** - Game design term for exaggerated, satisfying visual/audio responses
+- **Positive reinforcement animation** - Educational/behavioral psychology term
+- **Reward animation** or **reward effect** - Common in gamification
+- **Celebration effect** or **success animation** - General UX term
+- **Microinteraction** - UX design term for small, momentary feedback animations
+- **Particle effect** or **particle system** - Technical implementation term
+- **Fanfare** - Often used for audio+visual celebration combos
+- **Achievement animation** - Common in game achievement systems
