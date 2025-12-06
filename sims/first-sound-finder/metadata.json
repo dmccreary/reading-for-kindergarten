@@ -1,0 +1,53 @@
+{
+  "title": "First Sound Finder",
+  "description": "Listen to a word and identify the first sound from multiple picture choices. An interactive phonemic awareness game for kindergarten students.",
+  "creator": "Dan McCreary",
+  "subject": ["Reading", "Phonemic Awareness", "Early Literacy"],
+  "date": "2025-12-05",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Reading",
+  "topic": "Phonemic Awareness - First Sounds",
+  "learningObjectives": [
+    "Identify the first sound in spoken words",
+    "Match pictures based on shared beginning sounds",
+    "Develop auditory discrimination skills",
+    "Build foundational skills for phonics instruction"
+  ],
+  "bloomsLevel": ["Remember", "Understand"],
+  "duration": "5-15 minutes",
+  "prerequisites": ["Basic mouse/touch skills", "Familiarity with common objects and animals"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive × 480",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js CDN", "Web Speech API", "book-burst.js celebration animation"],
+  "accessibility": ["Text-to-speech audio", "Large touch targets", "Visual feedback", "Replay option"],
+  "controls": [
+    {
+      "type": "button",
+      "label": "Hear Word",
+      "description": "Speaks the target word aloud using text-to-speech"
+    },
+    {
+      "type": "button",
+      "label": "Next Word",
+      "description": "Generates a new question with a different target word"
+    },
+    {
+      "type": "clickable",
+      "label": "Picture Choices",
+      "description": "Four picture options, click to select your answer"
+    }
+  ],
+  "modelType": "Educational Game",
+  "variables": [
+    "currentWord - The target word students must match",
+    "pictureChoices - Array of 4 picture options",
+    "score - Number of correct answers",
+    "questionsAnswered - Total questions attempted"
+  ],
+  "celebrationAnimation": "book-burst.js"
+}
