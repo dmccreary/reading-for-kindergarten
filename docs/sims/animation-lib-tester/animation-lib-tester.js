@@ -24,7 +24,8 @@ let animationTypes = [
   'Storytime Spark Shower',
   'Bright Buddy Balloons',
   'Reading Rocket Zoom',
-  'Baseball Explosion'
+  'Baseball Explosion',
+  'Flying Frisbees'
 ];
 
 // UI elements
@@ -122,6 +123,7 @@ function draw() {
   updateAndDrawBrightBuddyBalloons();
   updateAndDrawReadingRocketZoom();
   updateAndDrawBaseballExplosion();
+  updateAndDrawFlyingFrisbees();
 
   // Draw control labels
   fill('black');
@@ -162,6 +164,7 @@ function triggerCelebration() {
   clearBrightBuddyBalloons();
   clearReadingRocketZoom();
   clearBaseballExplosion();
+  clearFlyingFrisbees();
 
   // Trigger selected animation using shared module functions
   switch (type) {
@@ -200,6 +203,9 @@ function triggerCelebration() {
       break;
     case 'Baseball Explosion':
       createBaseballExplosion(canvasWidth / 2, drawHeight, speedMultiplier);
+      break;
+    case 'Flying Frisbees':
+      createFlyingFrisbees(canvasWidth, drawHeight, speedMultiplier);
       break;
   }
 
