@@ -18,6 +18,8 @@ Self-contained celebration animations for educational MicroSims. Each animation 
 | `bright-buddy-balloons.js` | Bright Buddy Balloons | Colorful balloons floating upward |
 | `reading-rocket-zoom.js` | Reading Rocket Zoom | Rockets zooming across with flame trails |
 | `baseball-explosion.js` | Baseball Explosion | Baseballs exploding upward with red stitching |
+| `flying-frisbees.js` | Flying Frisbees | Colorful frisbees flying upward with spin |
+| `soccer-explosion.js` | Soccer Explosion | Soccer balls exploding upward with pentagon pattern |
 | `celebration-sounds.js` | Sound Effects | Optional audio feedback utilities |
 
 ## Quick Start
@@ -162,6 +164,18 @@ createBaseballExplosion(centerX, startY, speedMultiplier = 1.0)
 ```
 Baseballs explode upward from the center point with realistic red stitching.
 
+### Flying Frisbees
+```javascript
+createFlyingFrisbees(areaWidth, startY, speedMultiplier = 1.0)
+```
+Colorful frisbees fly upward with spinning motion and trails.
+
+### Soccer Explosion
+```javascript
+createSoccerExplosion(centerX, startY, speedMultiplier = 1.0)
+```
+Soccer balls explode upward from the center point with black pentagon pattern.
+
 ## Sound Effects (Optional)
 
 Include `celebration-sounds.js` for audio feedback:
@@ -228,4 +242,6 @@ Each animation file is approximately 80-120 lines (~3-4 KB), making them lightwe
 | bright-buddy-balloons.js | ~95 | ~3.0 KB |
 | reading-rocket-zoom.js | ~115 | ~3.6 KB |
 | baseball-explosion.js | ~120 | ~3.8 KB |
+| flying-frisbees.js | ~110 | ~3.4 KB |
+| soccer-explosion.js | ~120 | ~3.8 KB |
 | celebration-sounds.js | ~120 | ~3.5 KB |
