@@ -1,0 +1,66 @@
+{
+  "title": "Letter Motion Maker",
+  "description": "A kinesthetic learning MicroSim where children make body movements that match letter shapes, supporting physical learners and adding movement breaks to literacy instruction.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Letter Recognition", "Kinesthetic Learning", "Movement"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Letter Recognition through Movement",
+  "learningObjectives": [
+    "Associate letters with specific body movements",
+    "Explain how letter shapes relate to physical poses",
+    "Perform movements that represent letter shapes",
+    "Combine movements to spell simple words"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Create"],
+  "duration": "5-15 minutes",
+  "prerequisites": "None - supports letter learning",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 510",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Prev",
+      "description": "Go to previous letter"
+    },
+    {
+      "type": "button",
+      "label": "Show Motion",
+      "description": "Demonstrate the letter motion"
+    },
+    {
+      "type": "button",
+      "label": "I Did It!",
+      "description": "Record practice and advance"
+    },
+    {
+      "type": "button",
+      "label": "Next",
+      "description": "Go to next letter"
+    }
+  ],
+  "modelType": "Educational Activity",
+  "variables": ["currentIndex", "showDemo", "practiceCount"],
+  "assumptions": [
+    "User has space to move",
+    "Browser supports Web Speech API",
+    "User is learning letter shapes"
+  ],
+  "limitations": [
+    "Cannot verify correct movement execution",
+    "Requires physical space and ability to move",
+    "Some motions may need modification for accessibility"
+  ]
+}

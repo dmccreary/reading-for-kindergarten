@@ -15,6 +15,8 @@ social:
 
 [Run the Consonant Sound Match MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
+[Edit the Consonant Sound Match MicroSim Using the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/eoK0g-h9q)
+
 ## About This MicroSim
 
 The Consonant Sound Match MicroSim helps kindergarten students learn the primary sounds of consonant letters through self-directed exploration. Clicking any letter plays its sound and shows an example word with a picture, building audio-visual associations that strengthen memory.

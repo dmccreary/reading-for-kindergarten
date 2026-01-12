@@ -1,0 +1,61 @@
+{
+  "title": "Word Machine",
+  "description": "A fun factory-themed MicroSim where children load sounds into a machine and watch gears spin as the sounds blend into a word, making phonics concrete and engaging.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Phonics", "Blending", "Gamification"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Sound Blending with Factory Theme",
+  "learningObjectives": [
+    "Identify the three sounds in CVC words",
+    "Explain that sounds combine to make words",
+    "Load sounds in correct order to build words",
+    "Build multiple words using the machine metaphor"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Create"],
+  "duration": "5-15 minutes",
+  "prerequisites": "Basic letter sound knowledge",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 480",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "click",
+      "label": "Sound Hoppers",
+      "description": "Click to load each sound into the machine"
+    },
+    {
+      "type": "button",
+      "label": "BUILD WORD!",
+      "description": "Process loaded sounds into a word"
+    },
+    {
+      "type": "button",
+      "label": "New Word",
+      "description": "Reset machine for next word"
+    }
+  ],
+  "modelType": "Educational Game",
+  "variables": ["machineState", "loadedSounds", "animationFrame", "wordsBuilt"],
+  "assumptions": [
+    "User can click hoppers and buttons",
+    "Browser supports Web Speech API",
+    "User understands input/output metaphor"
+  ],
+  "limitations": [
+    "Limited to CVC pattern words",
+    "Animation timing is fixed",
+    "May be overwhelming for some learners"
+  ]
+}

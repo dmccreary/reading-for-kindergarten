@@ -1,0 +1,61 @@
+{
+  "title": "VC Word Blender",
+  "description": "Blend vowel-consonant combinations like -at, -in, -op as a stepping stone to full CVC word reading, with animated letter merging and example words.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Phonics", "Blending", "Word Families"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Vowel-Consonant Blending and Word Families",
+  "learningObjectives": [
+    "Recall common VC word family endings",
+    "Explain how word families share the same ending",
+    "Blend vowel and consonant sounds together",
+    "Recognize VC patterns within longer words"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "duration": "5-10 minutes",
+  "prerequisites": "Knowledge of letter sounds",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 460",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Prev",
+      "description": "Go to previous VC pattern"
+    },
+    {
+      "type": "button",
+      "label": "Blend!",
+      "description": "Animate letters sliding together with audio"
+    },
+    {
+      "type": "button",
+      "label": "Next",
+      "description": "Go to next VC pattern"
+    }
+  ],
+  "modelType": "Educational Visualization",
+  "variables": ["currentPattern", "letterSpacing", "blendProgress"],
+  "assumptions": [
+    "User knows basic vowel and consonant sounds",
+    "Browser supports Web Speech API",
+    "User is learning to blend sounds"
+  ],
+  "limitations": [
+    "Limited to VC (two-sound) combinations",
+    "Does not cover consonant blends or digraphs",
+    "Example words limited to common vocabulary"
+  ]
+}

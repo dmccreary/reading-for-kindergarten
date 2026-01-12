@@ -199,7 +199,7 @@ These VC patterns become the "chunks" children later recognize instantly within 
 
 **Challenges:** VC combinations aren't always meaningful words, which may confuse children expecting everything to "mean something."
 
-**Status:** Proposed
+**Status:** [Go to VC Word Blender](./vc-word-blender/index.md)
 
 ### Sound Slider
 
@@ -212,7 +212,7 @@ The kinesthetic slider action makes the abstract concept of blending more concre
 
 **Challenges:** Slider precision may be difficult for young children. Consider large, forgiving touch targets.
 
-**Status:** Proposed
+**Status:** [Go to Sound Slider](./sound-slider/index.md)
 
 ### Word Machine
 
@@ -225,7 +225,7 @@ The machine metaphor helps children understand that sounds go "in" separately an
 
 **Challenges:** Animation timing must match actual sound blending to reinforce the connection. Complex animations may distract from the learning goal.
 
-**Status:** Proposed
+**Status:** [Go to Word Machine](./word-machine/index.md)
 
 ---
 
@@ -268,7 +268,7 @@ Multiple difficulty levels control card size (3x3 up to 5x5) and word complexity
 
 **Challenges:** Bingo requires sustained attention through multiple rounds. Auto-pacing must match young children's processing speed.
 
-**Status:** Proposed
+**Status:** [Go to Sight Word Bingo](./sight-word-bingo/index.md)
 
 ---
 
@@ -285,7 +285,7 @@ Physical movement supports memory encoding and keeps wiggly kindergarteners enga
 
 **Challenges:** Requires physical space and movement capability. Camera-based tracking is technically complex and raises privacy considerations. Simpler implementation shows motions without verification.
 
-**Status:** Proposed
+**Status:** [Go to Letter Motion Maker](./letter-motion-maker/index.md)
 
 ### Nonsense Word Generator
 
@@ -298,7 +298,7 @@ Nonsense words (pseudowords) are used in reading assessments because they requir
 
 **Challenges:** Can feel abstract or unmotivating without playful framing. Some children find nonsense words confusing or frustrating.
 
-**Status:** Proposed
+**Status:** [Go to Nonsense Word Generator](./nonsense-word-generator/index.md)
 
 ### Reading Progress Path
 
@@ -311,7 +311,7 @@ This serves as a hub connecting all other simulations, providing structure and v
 
 **Challenges:** Requires most other MicroSims to be complete first. Progress tracking and state management add technical complexity.
 
-**Status:** Proposed
+**Status:** [Go to Reading Progress Path](./reading-progress-path/index.md)
 
 ---
 

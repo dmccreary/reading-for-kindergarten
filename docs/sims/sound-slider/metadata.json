@@ -1,0 +1,61 @@
+{
+  "title": "Sound Slider",
+  "description": "Drag a slider to blend sounds into words, giving children kinesthetic control over the blending process and making abstract phonics concepts concrete.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Phonics", "Blending", "Kinesthetic Learning"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Sound Blending with Kinesthetic Control",
+  "learningObjectives": [
+    "Recall individual phonemes in CVC words",
+    "Explain that blending is combining sounds smoothly",
+    "Control blending pace to decode words",
+    "Compare slow segmented sounds to smooth blending"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "duration": "5-10 minutes",
+  "prerequisites": "Familiarity with letter sounds",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 460",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "slider",
+      "label": "Sound Slider",
+      "description": "Drag to blend sounds - slow for segmented, fast for blended"
+    },
+    {
+      "type": "button",
+      "label": "New Word",
+      "description": "Load the next CVC word"
+    },
+    {
+      "type": "button",
+      "label": "Auto Blend",
+      "description": "Watch automatic blending demonstration"
+    }
+  ],
+  "modelType": "Educational Visualization",
+  "variables": ["sliderValue", "currentWordIndex", "lastSoundPlayed", "isComplete"],
+  "assumptions": [
+    "User can drag slider with mouse or touch",
+    "Browser supports Web Speech API",
+    "User is learning to blend sounds"
+  ],
+  "limitations": [
+    "Limited to CVC pattern words",
+    "Slider precision may vary on touch devices",
+    "Speech synthesis timing may vary by browser"
+  ]
+}
