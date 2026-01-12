@@ -1,0 +1,76 @@
+{
+  "title": "Sight Word Flashcards",
+  "description": "Interactive flashcards for high-frequency Dolch sight words with audio pronunciation, example sentences, and progress tracking for kindergarten learners.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Sight Words", "High-Frequency Words", "Early Literacy"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Sight Word Recognition",
+  "learningObjectives": [
+    "Recognize high-frequency sight words instantly",
+    "Use sight words correctly in sentence context",
+    "Read sight words fluently within connected text",
+    "Self-assess word mastery"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Evaluate"],
+  "duration": "5-15 minutes",
+  "prerequisites": "None - foundational skill",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 460",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Prev",
+      "description": "Go to previous flashcard"
+    },
+    {
+      "type": "button",
+      "label": "Next",
+      "description": "Go to next flashcard"
+    },
+    {
+      "type": "button",
+      "label": "Hear",
+      "description": "Speak the word and example sentence"
+    },
+    {
+      "type": "button",
+      "label": "I Know It!",
+      "description": "Mark word as known/unknown"
+    },
+    {
+      "type": "button",
+      "label": "Shuffle",
+      "description": "Randomize card order"
+    },
+    {
+      "type": "click",
+      "label": "Card",
+      "description": "Click card to flip between word and sentence"
+    }
+  ],
+  "modelType": "Educational Flashcard",
+  "variables": ["currentIndex", "showSentence", "knownWords", "cardFlip"],
+  "assumptions": [
+    "User can click/tap cards and buttons",
+    "Browser supports Web Speech API",
+    "User is learning to read"
+  ],
+  "limitations": [
+    "Limited to 40 Dolch pre-primer and primer words",
+    "Progress not saved between sessions",
+    "Speech synthesis quality varies by browser"
+  ]
+}

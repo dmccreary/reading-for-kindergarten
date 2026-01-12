@@ -1,0 +1,56 @@
+{
+  "title": "Rhyme Time",
+  "description": "An interactive matching game where kindergarten students match rhyming word pairs, developing phonemic awareness and rhyme recognition skills essential for early reading.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Phonemic Awareness", "Rhyme Recognition"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Rhyme Recognition",
+  "learningObjectives": [
+    "Recognize words that share ending sounds",
+    "Match rhyming word pairs",
+    "Develop phonemic awareness through rhyme",
+    "Connect visual images with rhyming words"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "duration": "5-10 minutes",
+  "prerequisites": "Basic understanding of rhyming words",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 470",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "New Game",
+      "description": "Start a new game with shuffled rhyming pairs"
+    },
+    {
+      "type": "click",
+      "label": "Card Click",
+      "description": "Select cards to match rhyming pairs"
+    }
+  ],
+  "modelType": "Educational Game",
+  "variables": ["cards", "selectedCard", "matchedPairs", "attempts"],
+  "assumptions": [
+    "User has mouse or touchscreen input",
+    "Browser supports Web Speech API for audio",
+    "User understands basic rhyming concept"
+  ],
+  "limitations": [
+    "Limited to 15 preset rhyming pairs",
+    "Regional accents may affect rhyme perception",
+    "Requires vocabulary knowledge to recognize pictures"
+  ]
+}

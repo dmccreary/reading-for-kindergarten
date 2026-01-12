@@ -1,0 +1,66 @@
+{
+  "title": "Sound Counter",
+  "description": "An interactive MicroSim where kindergarten students count phonemes in spoken words by tapping for each sound heard, developing phoneme segmentation skills essential for reading.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Phonemic Awareness", "Phoneme Segmentation"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Phoneme Segmentation",
+  "learningObjectives": [
+    "Understand that words are made of individual sounds",
+    "Count the number of phonemes in spoken words",
+    "Distinguish between letters and sounds",
+    "Segment CVC words into individual phonemes"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "duration": "5-10 minutes",
+  "prerequisites": "Basic understanding that words have sounds",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 460",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Hear Word",
+      "description": "Speak the current word using speech synthesis"
+    },
+    {
+      "type": "button",
+      "label": "Check",
+      "description": "Check if the tap count matches the phoneme count"
+    },
+    {
+      "type": "button",
+      "label": "New Word",
+      "description": "Load a new random word to count"
+    },
+    {
+      "type": "select",
+      "label": "Difficulty",
+      "description": "Filter words by phoneme count (2, 3, 4, or all)"
+    }
+  ],
+  "modelType": "Educational Game",
+  "variables": ["currentWord", "tapCount", "difficulty", "showResult"],
+  "assumptions": [
+    "User has mouse or touchscreen input",
+    "Browser supports Web Speech API for audio",
+    "Words use standard American English pronunciation"
+  ],
+  "limitations": [
+    "Phoneme counts based on standard pronunciation",
+    "Some regional accents may affect phoneme perception",
+    "Abstract concept may require explicit instruction"
+  ]
+}

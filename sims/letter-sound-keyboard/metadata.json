@@ -1,0 +1,62 @@
+{
+  "title": "Letter Sound Keyboard",
+  "description": "A virtual keyboard MicroSim that plays letter sounds when keys are pressed, encouraging playful exploration of letter-sound relationships for kindergarten students.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Phonics", "Letter Sounds", "Keyboard Skills"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Letter Sound Exploration",
+  "learningObjectives": [
+    "Explore letter sounds through free play",
+    "Recognize vowels and consonants as categories",
+    "Build letter-sound familiarity through repetition",
+    "Connect letters with their sounds"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Create"],
+  "duration": "5-15 minutes",
+  "prerequisites": "Basic letter recognition",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 430",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "keyboardSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "ABC/QWERTY Layout",
+      "description": "Toggle between alphabetical and QWERTY keyboard layouts"
+    },
+    {
+      "type": "checkbox",
+      "label": "Show Pictures",
+      "description": "Display emoji pictures for each letter"
+    },
+    {
+      "type": "click",
+      "label": "Letter Keys",
+      "description": "Press any letter to hear its sound"
+    }
+  ],
+  "modelType": "Educational Explorer",
+  "variables": ["layoutMode", "lastPlayedLetter", "showPicture"],
+  "assumptions": [
+    "User has mouse, touchscreen, or physical keyboard",
+    "Browser supports Web Speech API",
+    "User benefits from self-directed exploration"
+  ],
+  "limitations": [
+    "Random exploration may not build systematic knowledge",
+    "Speech synthesis quality varies by browser",
+    "Some letters have multiple sounds (only primary shown)"
+  ]
+}
