@@ -1,0 +1,66 @@
+{
+  "title": "Word Counter",
+  "description": "An interactive MicroSim where kindergarten students count words in sentences by tapping once per word, developing the concept of word and one-to-one correspondence.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Phonemic Awareness", "Concept of Word"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Concept of Word",
+  "learningObjectives": [
+    "Understand that sentences are made of individual words",
+    "Count words in spoken sentences",
+    "Develop one-to-one correspondence between spoken and written words",
+    "Identify word boundaries in continuous speech"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "duration": "5-10 minutes",
+  "prerequisites": "Basic understanding of spoken sentences",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 480",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Hear Sentence",
+      "description": "Speak the current sentence using speech synthesis"
+    },
+    {
+      "type": "button",
+      "label": "Check",
+      "description": "Check if the tap count matches the word count"
+    },
+    {
+      "type": "button",
+      "label": "New",
+      "description": "Load a new random sentence to count"
+    },
+    {
+      "type": "select",
+      "label": "Difficulty",
+      "description": "Filter sentences by word count (2, 3, 4, 5, or all)"
+    }
+  ],
+  "modelType": "Educational Game",
+  "variables": ["currentSentence", "tapCount", "blocks", "difficulty"],
+  "assumptions": [
+    "User has mouse or touchscreen input",
+    "Browser supports Web Speech API for audio",
+    "Sentences use clear word boundaries"
+  ],
+  "limitations": [
+    "Young children may count syllables instead of words",
+    "Connected speech makes word boundaries less obvious",
+    "Contractions and compound words may confuse learners"
+  ]
+}

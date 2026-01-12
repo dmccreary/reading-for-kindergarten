@@ -1,0 +1,66 @@
+{
+  "title": "Sound-to-Letter Match",
+  "description": "An interactive MicroSim where kindergarten students hear a sound and find the letter that makes it, strengthening bidirectional letter-sound connections essential for spelling and reading.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Phonics", "Sound-to-Letter Correspondence"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Sound-to-Letter Mapping",
+  "learningObjectives": [
+    "Match heard sounds to their written letters",
+    "Strengthen bidirectional letter-sound connections",
+    "Build encoding skills for spelling",
+    "Distinguish between similar consonant sounds"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "duration": "5-10 minutes",
+  "prerequisites": "Familiarity with consonant letter sounds",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 470",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Play Sound",
+      "description": "Replay the target sound"
+    },
+    {
+      "type": "button",
+      "label": "Hint",
+      "description": "Show a word hint for the target sound"
+    },
+    {
+      "type": "button",
+      "label": "New Game",
+      "description": "Start a new 5-round game"
+    },
+    {
+      "type": "click",
+      "label": "Letter Buttons",
+      "description": "Click letters to match the heard sound"
+    }
+  ],
+  "modelType": "Educational Game",
+  "variables": ["targetLetter", "score", "round", "showHint"],
+  "assumptions": [
+    "User has mouse or touchscreen input",
+    "Browser supports Web Speech API",
+    "User knows letter names"
+  ],
+  "limitations": [
+    "Limited to consonants with unambiguous mappings",
+    "Speech synthesis quality varies by browser",
+    "Some sounds map to multiple letters (not covered)"
+  ]
+}

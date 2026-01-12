@@ -57,7 +57,7 @@ The simulation can offer both uppercase and lowercase versions, with speech synt
 
 **Challenges:** Mouse tracing differs significantly from pencil grip—touchscreen devices provide more natural interaction. Accuracy tolerance must be generous for this age group.
 
-**Status:** Proposed
+**Status:** [Go to Letter Tracing](./letter-tracing/index.md)
 
 ---
 
@@ -74,7 +74,7 @@ Words should use clear, familiar vocabulary from a kindergartener's world: anima
 
 **Challenges:** Audio quality and clear pronunciation are essential. Children with speech delays or hearing differences may need accommodations.
 
-**Status:** Proposed
+**Status:** [Go to First Sound Finder](./first-sound-finder/index.md)
 
 ### Sound Counter
 
@@ -87,7 +87,7 @@ Start with 2-3 phoneme words and progress to 4-5 phoneme words. Continuous sound
 
 **Challenges:** Abstract concept for young learners—connecting sounds to physical taps requires explicit instruction. Some phonemes blend together naturally, making counting difficult.
 
-**Status:** Proposed
+**Status:** [Go to Sound Counter](./sound-counter/index.md)
 
 ### Word Counter
 
@@ -100,7 +100,7 @@ Sentences should start with 2-3 words and progress to 5-6 words maximum. Use sim
 
 **Challenges:** Young children often think in phrases rather than words ("ice cream" feels like one unit). Connected speech makes word boundaries less obvious.
 
-**Status:** Proposed
+**Status:** [Go to Word Counter](./word-counter/index.md)
 
 ### Rhyme Time
 
@@ -113,7 +113,7 @@ Audio support speaks each word when tapped, helping children who may not recogni
 
 **Challenges:** Requires vocabulary knowledge—children must know what pictures represent to compare sounds. Regional accents may affect rhyme perception.
 
-**Status:** Proposed
+**Status:** [Go to Rhyme Time](./rhyme-time/index.md)
 
 ---
 
@@ -130,7 +130,7 @@ Focus on the most common sound for each consonant—avoid confusing variations i
 
 **Challenges:** Some consonants have multiple sounds (C, G, S)—must decide which to feature. Letters like X are rarely heard in initial position.
 
-**Status:** Proposed
+**Status:** [Go to Consonant Sound Match](./consonant-sound-match/index.md)
 
 ### Vowel Sound Explorer
 
@@ -143,7 +143,7 @@ Mouth position diagrams or simple animations showing lip/tongue position can rei
 
 **Challenges:** Long vowel sounds are the letter names, which can confuse the concept. Abstract concept requires concrete examples and repetition.
 
-**Status:** Proposed
+**Status:** [Go to Vowel Sound Explorer](./vowel-sound-explorer/index.md)
 
 ### Sound-to-Letter Match
 
@@ -156,7 +156,7 @@ This reversal of the typical "see letter, say sound" practice strengthens bidire
 
 **Challenges:** Some sounds map to multiple letters (e.g., /k/ could be C or K). Initially focus on unambiguous mappings.
 
-**Status:** Proposed
+**Status:** [Go to Sound-to-Letter Match](./sound-to-letter-match/index.md)
 
 ### Letter Sound Keyboard
 
@@ -169,7 +169,7 @@ Consider adding picture hints that appear briefly when letters are pressed. Volu
 
 **Challenges:** Random exploration may not build systematic knowledge—consider guided modes. Simultaneous key presses need handling.
 
-**Status:** Proposed
+**Status:** [Go to Letter Sound Keyboard](./letter-sound-keyboard/index.md)
 
 ---
 
@@ -186,7 +186,7 @@ Start with word families (-at, -an, -ig) where children change only the initial 
 
 **Challenges:** Blending is cognitively demanding for young learners. May require scaffolding: hearing sounds separately, then stretched, then blended.
 
-**Status:** Proposed
+**Status:** [Go to CVC Word Builder](./cvc-word-builder/index.md)
 
 ### VC Word Blender
 
@@ -242,7 +242,7 @@ The Dolch or Fry high-frequency word lists provide research-based word selection
 
 **Challenges:** Rote memorization can become tedious. Interactivity and encouragement help maintain engagement.
 
-**Status:** Proposed
+**Status:** [Go to Sight Word Flashcards](./sight-word-flashcards/index.md)
 
 ### Sight Word Memory
 
@@ -255,7 +255,7 @@ Consider variations: match word-to-word, word-to-picture, or word-to-sentence. A
 
 **Challenges:** Memory games can frustrate children with attention or working memory challenges. Consider accessible modes with fewer cards.
 
-**Status:** Proposed
+**Status:** [Go to Sight Word Memory](./sight-word-memory/index.md)
 
 ### Sight Word Bingo
 

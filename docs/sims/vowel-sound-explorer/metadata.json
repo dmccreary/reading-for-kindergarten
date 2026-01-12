@@ -1,0 +1,66 @@
+{
+  "title": "Vowel Sound Explorer",
+  "description": "An interactive MicroSim showing short and long vowel sounds with example words and pictures, helping kindergarten students understand that vowels can make different sounds.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Phonics", "Vowel Sounds"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Short and Long Vowel Sounds",
+  "learningObjectives": [
+    "Understand that vowels can make different sounds",
+    "Distinguish between short and long vowel sounds",
+    "Associate vowel sounds with example words",
+    "Recognize breve and macron notation for vowel sounds"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "duration": "5-10 minutes",
+  "prerequisites": "Recognition of vowel letters A, E, I, O, U",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 470",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Short Sounds",
+      "description": "Switch to short vowel sound mode"
+    },
+    {
+      "type": "button",
+      "label": "Long Sounds",
+      "description": "Switch to long vowel sound mode"
+    },
+    {
+      "type": "button",
+      "label": "Hear Again",
+      "description": "Replay the current vowel sound"
+    },
+    {
+      "type": "click",
+      "label": "Vowel Buttons",
+      "description": "Click any vowel to hear its sound"
+    }
+  ],
+  "modelType": "Educational Explorer",
+  "variables": ["selectedVowel", "soundMode"],
+  "assumptions": [
+    "User has mouse or touchscreen input",
+    "Browser supports Web Speech API",
+    "User recognizes vowel letters"
+  ],
+  "limitations": [
+    "Simplified to two sounds per vowel (actual vowels have more variations)",
+    "Speech synthesis quality varies by browser",
+    "Long vowel explanation may require teacher scaffolding"
+  ]
+}

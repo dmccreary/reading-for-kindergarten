@@ -40,8 +40,19 @@ nav:
     - Animation Library Tester: sims/animation-lib-tester/index.md
     - Shared Animation Library: sims/shared/animations/index.md
     - First Sound Finder: sims/first-sound-finder/index.md
-  
-  
+    - Letter Tracing: sims/letter-tracing/index.md
+    - Sound Counter: sims/sound-counter/index.md
+    - Word Counter: sims/word-counter/index.md
+    - Rhyme Time: sims/rhyme-time/index.md
+    - Consonant Sound Match: sims/consonant-sound-match/index.md
+    - Vowel Sound Explorer: sims/vowel-sound-explorer/index.md
+    - Sound-to-Letter Match: sims/sound-to-letter-match/index.md
+    - Letter Sound Keyboard: sims/letter-sound-keyboard/index.md
+    - CVC Word Builder: sims/cvc-word-builder/index.md
+    - Sight Word Flashcards: sims/sight-word-flashcards/index.md
+    - Sight Word Memory: sims/sight-word-memory/index.md
+
+
   - Learning Graph:
     - Introduction: learning-graph/index.md
     - Graph Viewer: sims/graph-viewer/index.md

@@ -1,0 +1,66 @@
+{
+  "title": "Letter Tracing",
+  "description": "An interactive MicroSim where kindergarten students trace letters with finger or mouse to learn proper letter formation and stroke order with visual guides, colorful trails, and celebratory feedback.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Writing", "Letter Formation", "Fine Motor Skills"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Letter Formation",
+  "learningObjectives": [
+    "Identify correct starting points for letter strokes",
+    "Follow proper stroke order when forming letters",
+    "Trace both uppercase and lowercase letters",
+    "Develop fine motor control for handwriting"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Create"],
+  "duration": "5-15 minutes",
+  "prerequisites": "Basic mouse or touchscreen use",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 500",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "< Prev",
+      "description": "Navigate to previous letter"
+    },
+    {
+      "type": "button",
+      "label": "Next >",
+      "description": "Navigate to next letter"
+    },
+    {
+      "type": "checkbox",
+      "label": "Uppercase",
+      "description": "Toggle between lowercase and uppercase letters"
+    },
+    {
+      "type": "button",
+      "label": "Hear Letter",
+      "description": "Speak the current letter using speech synthesis"
+    }
+  ],
+  "modelType": "Educational Game",
+  "variables": ["currentLetter", "isUppercase", "currentStrokeIndex", "traceProgress"],
+  "assumptions": [
+    "User has mouse or touchscreen input",
+    "Browser supports Web Speech API for audio",
+    "Generous tolerance for young learners"
+  ],
+  "limitations": [
+    "Stroke paths are simplified representations",
+    "Mouse tracing differs from pencil grip",
+    "Speech synthesis quality varies by browser"
+  ]
+}
