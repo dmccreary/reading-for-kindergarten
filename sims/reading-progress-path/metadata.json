@@ -1,0 +1,56 @@
+{
+  "title": "Reading Progress Path",
+  "description": "A visual journey map showing the path from learning letters to reading, with stations for each skill area that link to related MicroSims and track progress.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Progress Tracking", "Curriculum Overview", "Navigation"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Reading Development Journey and Progress Tracking",
+  "learningObjectives": [
+    "Identify the main skill areas in learning to read",
+    "Explain how reading skills build on each other",
+    "Navigate to appropriate activities for skill level",
+    "Track own progress through the reading journey"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Evaluate"],
+  "duration": "2-5 minutes",
+  "prerequisites": "None - serves as navigation hub",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 550",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "click",
+      "label": "Stations",
+      "description": "Click stations to view details and activities"
+    },
+    {
+      "type": "button",
+      "label": "Reset Progress",
+      "description": "Clear all progress stars"
+    }
+  ],
+  "modelType": "Navigation Hub",
+  "variables": ["selectedStation", "starsEarned", "hoveredStation"],
+  "assumptions": [
+    "User can click/tap stations",
+    "User wants to track reading progress",
+    "User navigates to other MicroSims from here"
+  ],
+  "limitations": [
+    "Progress not persistent (demo only)",
+    "Links to MicroSims not implemented in standalone version",
+    "Stars are simulated, not from actual activity completion"
+  ]
+}

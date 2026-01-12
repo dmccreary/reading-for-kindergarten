@@ -1,0 +1,66 @@
+{
+  "title": "Sight Word Bingo",
+  "description": "An interactive bingo game where kindergarteners listen to spoken sight words and mark them on their card, combining auditory and visual word recognition practice.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Sight Words", "Bingo", "Auditory Learning"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Sight Word Recognition through Bingo",
+  "learningObjectives": [
+    "Recognize spoken sight words and match to print",
+    "Connect auditory word recognition to visual recognition",
+    "Quickly scan and locate specific words in a grid",
+    "Use pattern recognition for winning combinations"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "duration": "5-15 minutes",
+  "prerequisites": "Basic familiarity with sight words helpful but not required",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 540",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "Call Word",
+      "description": "Speak a new word to find on the card"
+    },
+    {
+      "type": "button",
+      "label": "New Card",
+      "description": "Generate a new random bingo card"
+    },
+    {
+      "type": "select",
+      "label": "Grid Size",
+      "description": "Choose 3x3, 4x4, or 5x5 difficulty"
+    },
+    {
+      "type": "click",
+      "label": "Cells",
+      "description": "Click cells to mark called words"
+    }
+  ],
+  "modelType": "Educational Game",
+  "variables": ["bingoCard", "markedCells", "calledWords", "currentWord", "gameWon"],
+  "assumptions": [
+    "User can click/tap grid cells",
+    "Browser supports Web Speech API",
+    "User understands basic bingo rules"
+  ],
+  "limitations": [
+    "Pool limited to 48 Dolch words",
+    "Single player only (no multiplayer)",
+    "Requires audio for full experience"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Nonsense Word Generator",
+  "description": "Generate and decode made-up CVC words to practice pure phonics decoding skills without relying on word memorization or picture clues.",
+  "creator": "Claude AI",
+  "subject": ["Reading", "Phonics", "Decoding", "Nonsense Words"],
+  "date": "2026-01-12",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "K",
+  "subjectArea": "Early Literacy",
+  "topic": "Pseudoword Decoding and Blending",
+  "learningObjectives": [
+    "Recall individual letter sounds for consonants and vowels",
+    "Explain that sounds can be blended even for made-up words",
+    "Decode unfamiliar CVC combinations using phonics",
+    "Identify which sounds are difficult"
+  ],
+  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "duration": "5-15 minutes",
+  "prerequisites": "Knowledge of consonant and vowel sounds",
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 460",
+  "responsive": true,
+  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "touchSupport": true,
+    "audioFeedback": true
+  },
+  "controls": [
+    {
+      "type": "button",
+      "label": "New Silly Word",
+      "description": "Generate a new nonsense CVC word"
+    },
+    {
+      "type": "button",
+      "label": "Sound It Out",
+      "description": "Hear each sound then the blended word"
+    },
+    {
+      "type": "button",
+      "label": "Mix Letters",
+      "description": "Randomly change one letter position"
+    }
+  ],
+  "modelType": "Educational Tool",
+  "variables": ["currentWord", "blendStep", "wordsDecoded"],
+  "assumptions": [
+    "User knows basic letter sounds",
+    "Browser supports Web Speech API",
+    "User understands these are made-up words"
+  ],
+  "limitations": [
+    "Limited to CVC pattern only",
+    "Speech synthesis pronunciation may vary",
+    "Some generated words may sound real but are filtered"
+  ]
+}
