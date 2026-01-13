@@ -10,7 +10,7 @@ social:
 
 # Letter Hunt
 
-<iframe src="main.html" height="520px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="490px" width="100%" scrolling="no"></iframe>
 
 [Run the Letter Hunt MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 

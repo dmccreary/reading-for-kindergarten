@@ -4,7 +4,7 @@
 
 // Canvas dimensions
 let canvasWidth = 400;
-let drawHeight = 420;
+let drawHeight = 380;
 let controlHeight = 60;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 15;
@@ -133,7 +133,7 @@ function setup() {
 
   // Create Next button
   nextButton = createButton('Next Word →');
-  nextButton.position(canvasWidth - 150, drawHeight + 15);
+  nextButton.position(canvasWidth - 180, drawHeight + 15);
   nextButton.mousePressed(nextQuestion);
   nextButton.style('font-size', '18px');
   nextButton.style('padding', '10px 20px');
@@ -208,7 +208,7 @@ function draw() {
   updateAndDrawBookBurst();
 
   // Update button positions on resize
-  nextButton.position(canvasWidth - 150, drawHeight + 15);
+  nextButton.position(canvasWidth - 170, drawHeight + 15);
 }
 
 function drawWordDisplay() {

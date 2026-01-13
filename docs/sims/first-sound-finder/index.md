@@ -10,7 +10,7 @@ social:
 
 # First Sound Finder
 
-<iframe src="main.html" height="500px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="460px" width="100%" scrolling="no"></iframe>
 
 [Run First Sound Finder Fullscreen](./main.html){ .md-button .md-button--primary }
 [Edit First Sound Finder with the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/ZfWvjZnf4)
@@ -19,7 +19,7 @@ social:
 You can include this MicroSim on your website using the following `iframe`:
 
 ```html
-<iframe src="https://dmccreary.github.io/reading-for-kindergarten/sims/first-sound-finder/main.html" height="500px" scrolling="no"></iframe>
+<iframe src="https://dmccreary.github.io/reading-for-kindergarten/sims/first-sound-finder/main.html" height="460px" scrolling="no"></iframe>
 ```
 
 ## Description
