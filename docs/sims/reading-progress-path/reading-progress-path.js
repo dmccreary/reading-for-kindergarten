@@ -9,13 +9,21 @@ let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 10;
 
+// Base URL for MicroSims
+const SIMS_BASE_URL = '../';
+
 // Reading skill stations
 const stations = [
   {
     id: 'letters',
     name: 'Letters',
     description: 'Learn uppercase & lowercase letters',
-    skills: ['Talking Letters', 'Letter Matching', 'Letter Hunt', 'Letter Tracing'],
+    skills: [
+      { name: 'Talking Letters', url: 'talking-letters/' },
+      { name: 'Letter Matching', url: 'letter-matching-game/' },
+      { name: 'Letter Hunt', url: 'letter-hunt/' },
+      { name: 'Letter Tracing', url: 'letter-tracing/' }
+    ],
     emoji: '🔤',
     color: '#2196F3',
     x: 0.2,
@@ -25,7 +33,12 @@ const stations = [
     id: 'sounds',
     name: 'Sounds',
     description: 'Hear and identify sounds in words',
-    skills: ['First Sound Finder', 'Sound Counter', 'Word Counter', 'Rhyme Time'],
+    skills: [
+      { name: 'First Sound Finder', url: 'first-sound-finder/' },
+      { name: 'Sound Counter', url: 'sound-counter/' },
+      { name: 'Word Counter', url: 'word-counter/' },
+      { name: 'Rhyme Time', url: 'rhyme-time/' }
+    ],
     emoji: '👂',
     color: '#9C27B0',
     x: 0.75,
@@ -35,7 +48,12 @@ const stations = [
     id: 'lettersounds',
     name: 'Letter-Sound',
     description: 'Connect letters to their sounds',
-    skills: ['Consonant Sound Match', 'Vowel Explorer', 'Sound-to-Letter', 'Letter Keyboard'],
+    skills: [
+      { name: 'Consonant Sound Match', url: 'consonant-sound-match/' },
+      { name: 'Vowel Explorer', url: 'vowel-sound-explorer/' },
+      { name: 'Sound-to-Letter', url: 'sound-to-letter-match/' },
+      { name: 'Letter Keyboard', url: 'letter-sound-keyboard/' }
+    ],
     emoji: '🔊',
     color: '#FF9800',
     x: 0.25,
@@ -45,7 +63,12 @@ const stations = [
     id: 'blending',
     name: 'Blending',
     description: 'Blend sounds into words',
-    skills: ['CVC Word Builder', 'VC Blender', 'Sound Slider', 'Word Machine'],
+    skills: [
+      { name: 'CVC Word Builder', url: 'cvc-word-builder/' },
+      { name: 'VC Blender', url: 'vc-word-blender/' },
+      { name: 'Sound Slider', url: 'sound-slider/' },
+      { name: 'Word Machine', url: 'word-machine/' }
+    ],
     emoji: '🧩',
     color: '#4CAF50',
     x: 0.7,
@@ -55,7 +78,11 @@ const stations = [
     id: 'sightwords',
     name: 'Sight Words',
     description: 'Learn high-frequency words',
-    skills: ['Flashcards', 'Memory Game', 'Bingo'],
+    skills: [
+      { name: 'Flashcards', url: 'sight-word-flashcards/' },
+      { name: 'Memory Game', url: 'sight-word-memory/' },
+      { name: 'Bingo', url: 'sight-word-bingo/' }
+    ],
     emoji: '👀',
     color: '#E91E63',
     x: 0.3,
@@ -65,7 +92,10 @@ const stations = [
     id: 'reading',
     name: 'Reading!',
     description: 'Put it all together!',
-    skills: ['Nonsense Words', 'Letter Motion Maker'],
+    skills: [
+      { name: 'Nonsense Words', url: 'nonsense-word-generator/' },
+      { name: 'Letter Motion Maker', url: 'letter-motion-maker/' }
+    ],
     emoji: '📖',
     color: '#FF5722',
     x: 0.65,
@@ -76,8 +106,56 @@ const stations = [
 // Game state
 let selectedStation = null;
 let hoveredStation = null;
-let starsEarned = {};
+let completedSkills = {}; // { stationId: ['skill-url-1', 'skill-url-2'] }
 let scrollOffset = 0;
+
+// LocalStorage key
+const STORAGE_KEY = 'readingProgressPath';
+
+// Save progress to localStorage
+function saveProgress() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(completedSkills));
+  } catch (e) {
+    console.warn('Could not save progress:', e);
+  }
+}
+
+// Load progress from localStorage
+function loadProgress() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      return JSON.parse(saved);
+    }
+  } catch (e) {
+    console.warn('Could not load progress:', e);
+  }
+  return null;
+}
+
+// Check if a skill is completed
+function isSkillCompleted(stationId, skillUrl) {
+  return completedSkills[stationId] && completedSkills[stationId].includes(skillUrl);
+}
+
+// Get count of completed skills for a station
+function getStarsForStation(stationId) {
+  return completedSkills[stationId] ? completedSkills[stationId].length : 0;
+}
+
+// Mark a skill as completed and open the MicroSim
+function completeSkill(stationId, skill) {
+  if (!completedSkills[stationId]) {
+    completedSkills[stationId] = [];
+  }
+  if (!completedSkills[stationId].includes(skill.url)) {
+    completedSkills[stationId].push(skill.url);
+    saveProgress();
+  }
+  // Open the MicroSim in a new tab
+  window.open(SIMS_BASE_URL + skill.url, '_blank');
+}
 
 // UI Elements
 let resetButton;
@@ -87,14 +165,19 @@ function setup() {
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  // Initialize stars (simulated progress)
-  stations.forEach(station => {
-    starsEarned[station.id] = floor(random(0, station.skills.length + 1));
-  });
+  // Load saved progress or initialize to empty
+  const savedProgress = loadProgress();
+  if (savedProgress) {
+    completedSkills = savedProgress;
+  } else {
+    stations.forEach(station => {
+      completedSkills[station.id] = [];
+    });
+  }
 
   // Create reset button
   resetButton = createButton('Reset Progress');
-  resetButton.position(canvasWidth - 110, drawHeight + 12);
+  resetButton.position(canvasWidth - 130, drawHeight + 12);
   resetButton.mousePressed(resetProgress);
   resetButton.style('font-size', '12px');
   resetButton.style('padding', '6px 12px');
@@ -126,7 +209,7 @@ function draw() {
   drawLegend();
 
   // Reposition button
-  resetButton.position(canvasWidth - 110, drawHeight + 12);
+  resetButton.position(canvasWidth - 130, drawHeight + 12);
 }
 
 function drawBackground() {
@@ -226,7 +309,7 @@ function drawStations() {
     text(station.name, x, y + 18);
 
     // Stars earned
-    let stars = starsEarned[station.id] || 0;
+    let stars = getStarsForStation(station.id);
     let maxStars = station.skills.length;
 
     // Draw star meter below station
@@ -289,25 +372,40 @@ function drawDetailPanel() {
   text(selectedStation.description, panelX + panelWidth / 2, panelY + 40);
 
   // Skills list
-  fill('#333');
   textSize(11);
   textAlign(LEFT, TOP);
   let skillY = panelY + 65;
 
-  text('Activities:', panelX + 15, skillY);
-  skillY += 18;
+  fill('#333');
+  text('Activities (click to play):', panelX + 15, skillY);
+  skillY += 20;
 
   for (let i = 0; i < selectedStation.skills.length; i++) {
-    let starIcon = i < starsEarned[selectedStation.id] ? '⭐' : '☆';
-    text(starIcon + ' ' + selectedStation.skills[i], panelX + 20, skillY);
-    skillY += 16;
+    let skill = selectedStation.skills[i];
+    let completed = isSkillCompleted(selectedStation.id, skill.url);
+    let starIcon = completed ? '⭐' : '☆';
+
+    // Highlight if mouse is over this skill
+    let skillTextY = skillY;
+    let isHoveredSkill = mouseY >= skillTextY && mouseY < skillTextY + 16 &&
+                         mouseX >= panelX + 20 && mouseX < panelX + panelWidth - 20;
+
+    if (isHoveredSkill) {
+      fill(selectedStation.color);
+      cursor('pointer');
+    } else {
+      fill(completed ? '#333' : '#666');
+    }
+
+    text(starIcon + ' ' + skill.name, panelX + 20, skillY);
+    skillY += 18;
   }
 
   // Tip
   fill('#999');
   textSize(10);
   textAlign(CENTER, BOTTOM);
-  text('Click activities to explore!', panelX + panelWidth / 2, panelY + panelHeight - 10);
+  text('Click an activity to earn a star!', panelX + panelWidth / 2, panelY + panelHeight - 10);
 }
 
 function drawLegend() {
@@ -328,7 +426,7 @@ function drawLegend() {
   let totalStars = 0;
   let maxStars = 0;
   stations.forEach(station => {
-    totalStars += starsEarned[station.id] || 0;
+    totalStars += getStarsForStation(station.id);
     maxStars += station.skills.length;
   });
 
@@ -338,17 +436,31 @@ function drawLegend() {
 }
 
 function mousePressed() {
-  // Check if clicking close button on detail panel
+  // Check if clicking on detail panel
   if (selectedStation) {
     let panelWidth = min(280, canvasWidth - 40);
     let panelHeight = 160;
     let panelX = (canvasWidth - panelWidth) / 2;
     let panelY = drawHeight / 2 - panelHeight / 2;
 
+    // Check close button
     if (mouseX > panelX + panelWidth - 30 && mouseX < panelX + panelWidth &&
         mouseY > panelY && mouseY < panelY + 30) {
       selectedStation = null;
       return;
+    }
+
+    // Check if clicking on a skill (activities list)
+    let skillY = panelY + 65 + 20; // Starting Y position of first skill
+    for (let i = 0; i < selectedStation.skills.length; i++) {
+      let skill = selectedStation.skills[i];
+      if (mouseY >= skillY && mouseY < skillY + 18 &&
+          mouseX >= panelX + 20 && mouseX < panelX + panelWidth - 20) {
+        completeSkill(selectedStation.id, skill);
+        playClickSound();
+        return;
+      }
+      skillY += 18;
     }
 
     // Click outside panel closes it
@@ -393,9 +505,10 @@ function mouseMoved() {
 
 function resetProgress() {
   stations.forEach(station => {
-    starsEarned[station.id] = 0;
+    completedSkills[station.id] = [];
   });
   selectedStation = null;
+  saveProgress();
 }
 
 function playClickSound() {
