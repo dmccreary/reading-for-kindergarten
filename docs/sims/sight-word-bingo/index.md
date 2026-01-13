@@ -11,7 +11,7 @@ social:
 
 # Sight Word Bingo
 
-<iframe src="main.html" height="542px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="552px" width="100%" scrolling="no"></iframe>
 
 [Run the Sight Word Bingo MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 

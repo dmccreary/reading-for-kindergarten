@@ -4,10 +4,10 @@
 
 // Canvas dimensions
 let canvasWidth = 400;
-let drawHeight = 480;
+let drawHeight = 500;
 let controlHeight = 60;
 let canvasHeight = drawHeight + controlHeight;
-let margin = 10;
+let margin = 20;
 
 // Sight words for bingo
 const allSightWords = [
@@ -38,31 +38,45 @@ let showingCurrentWord = false;
 let wordDisplayTimer = 0;
 
 // UI Elements
-let callButton, newGameButton, sizeSelect;
+let callButton, repeatButton, newGameButton, sizeSelect, showWordCheckbox;
 
 function setup() {
   updateCanvasSize();
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
+  let buttonY = drawHeight + 10;
+
   // Create Call Word button
   callButton = createButton('Call Word');
-  callButton.position(margin, drawHeight + 15);
+  callButton.position(margin, buttonY);
   callButton.mousePressed(callNewWord);
   callButton.style('font-size', '14px');
-  callButton.style('padding', '8px 16px');
+  callButton.style('padding', '8px 12px');
   callButton.style('background-color', '#2196F3');
   callButton.style('color', 'white');
   callButton.style('border', 'none');
   callButton.style('border-radius', '5px');
   callButton.style('cursor', 'pointer');
 
+  // Create Repeat Word button
+  repeatButton = createButton('Repeat');
+  repeatButton.position(margin + 90, buttonY);
+  repeatButton.mousePressed(repeatWord);
+  repeatButton.style('font-size', '14px');
+  repeatButton.style('padding', '8px 12px');
+  repeatButton.style('background-color', '#FF9800');
+  repeatButton.style('color', 'white');
+  repeatButton.style('border', 'none');
+  repeatButton.style('border-radius', '5px');
+  repeatButton.style('cursor', 'pointer');
+
   // Create New Game button
   newGameButton = createButton('New Card');
-  newGameButton.position(margin + 100, drawHeight + 15);
+  newGameButton.position(margin + 165, buttonY);
   newGameButton.mousePressed(startNewGame);
   newGameButton.style('font-size', '14px');
-  newGameButton.style('padding', '8px 16px');
+  newGameButton.style('padding', '8px 12px');
   newGameButton.style('background-color', '#4CAF50');
   newGameButton.style('color', 'white');
   newGameButton.style('border', 'none');
@@ -71,14 +85,19 @@ function setup() {
 
   // Create grid size selector
   sizeSelect = createSelect();
-  sizeSelect.position(margin + 200, drawHeight + 15);
-  sizeSelect.option('3×3 Easy', '3');
-  sizeSelect.option('4×4 Medium', '4');
-  sizeSelect.option('5×5 Hard', '5');
-  sizeSelect.selected('3×3 Easy');
+  sizeSelect.position(margin + 255, buttonY);
+  sizeSelect.option('3×3', '3');
+  sizeSelect.option('4×4', '4');
+  sizeSelect.option('5×5', '5');
+  sizeSelect.selected('3×3');
   sizeSelect.changed(startNewGame);
   sizeSelect.style('font-size', '14px');
-  sizeSelect.style('padding', '8px 12px');
+  sizeSelect.style('padding', '8px 8px');
+
+  // Create Show Word checkbox (off by default)
+  showWordCheckbox = createCheckbox('Show Word', false);
+  showWordCheckbox.position(margin + 320, buttonY + 5);
+  showWordCheckbox.style('font-size', '14px');
 
   textFont('Arial');
   startNewGame();
@@ -148,9 +167,17 @@ function drawCurrentWord() {
     textAlign(CENTER, TOP);
     text('Listen for:', canvasWidth / 2, boxY + 8);
 
-    textSize(32);
-    textAlign(CENTER, CENTER);
-    text(currentWord, canvasWidth / 2, boxY + boxHeight / 2 + 8);
+    if (showWordCheckbox.checked()) {
+      textSize(32);
+      textAlign(CENTER, CENTER);
+      text(currentWord, canvasWidth / 2, boxY + boxHeight / 2 + 8);
+    } else {
+      // Show hint that word is audio-only
+      fill('#999');
+      textSize(16);
+      textAlign(CENTER, CENTER);
+      text('(listen carefully)', canvasWidth / 2, boxY + boxHeight / 2 + 8);
+    }
   } else {
     fill('#666');
     noStroke();
@@ -229,8 +256,9 @@ function drawInstructions() {
 
   // Show called words count
   fill('#1565C0');
-  textSize(11);
-  text('Words called: ' + calledWords.length, canvasWidth / 2, instrY + 40);
+  textAlign(RIGHT, TOP);
+  textSize(14);
+  text('Words called: ' + calledWords.length, canvasWidth - margin, instrY + 50);
 }
 
 function mousePressed() {
@@ -401,6 +429,13 @@ function speakWord(word) {
   utterance.rate = 0.7;
   utterance.pitch = 1.1;
   speechSynthesis.speak(utterance);
+}
+
+function repeatWord() {
+  if (currentWord) {
+    speakWord(currentWord);
+    playCallSound();
+  }
 }
 
 function playCallSound() {
