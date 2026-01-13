@@ -1323,6 +1323,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#design-tradeoffs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Tradeoffs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Tradeoffs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative Approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -1713,6 +1755,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#design-tradeoffs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Tradeoffs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Tradeoffs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative Approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -1749,16 +1833,18 @@
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Reading Progress Path MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim<a class="headerlink" href="#about-this-microsim" title="Permanent link">&para;</a></h2>
-<p>The Reading Progress Path provides a visual overview of the reading journey, showing how skills build on each other from letter recognition to fluent reading. Each station on the path represents a skill area with links to related MicroSims. Progress is visualized through stars, motivating continued practice.</p>
+<p>The Reading Progress Path provides a visual overview of the reading journey, showing how skills build on each other from letter recognition to fluent reading. Each station on the path represents a skill area with clickable links to related MicroSims. Progress is tracked using browser localStorage and visualized through stars, motivating continued practice.</p>
 <h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>6 Skill Stations</strong>: Letters, Sounds, Letter-Sound, Blending, Sight Words, Reading</li>
 <li><strong>Visual Path</strong>: Winding road connecting skill areas</li>
-<li><strong>Progress Stars</strong>: Track completion of activities</li>
-<li><strong>Detail Panels</strong>: Click stations to see activities</li>
+<li><strong>Clickable Activities</strong>: Click any activity to open its MicroSim and earn a star</li>
+<li><strong>Persistent Progress</strong>: Stars are saved to browser localStorage and persist across sessions (note: progress is specific to this browser on this device)</li>
+<li><strong>Detail Panels</strong>: Click stations to see available activities</li>
 <li><strong>Color Coding</strong>: Each skill area has unique color</li>
 <li><strong>Emoji Icons</strong>: Visual representation of each skill</li>
 <li><strong>Total Progress</strong>: Overall star count displayed</li>
+<li><strong>Reset Option</strong>: Clear all progress to start fresh</li>
 </ul>
 <h3 id="skill-stations">Skill Stations<a class="headerlink" href="#skill-stations" title="Permanent link">&para;</a></h3>
 <table>
@@ -1805,12 +1891,17 @@
 <h3 id="how-to-use">How to Use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>View the Path</strong>: See the journey from Letters to Reading</li>
-<li><strong>Click Stations</strong>: Tap any station to see details</li>
-<li><strong>View Activities</strong>: See which activities are available</li>
-<li><strong>Track Stars</strong>: Stars show activities completed</li>
-<li><strong>Navigate</strong>: Click outside panel to close it</li>
-<li><strong>Reset</strong>: Clear progress to start fresh</li>
+<li><strong>Click Stations</strong>: Tap any station to open its detail panel</li>
+<li><strong>Launch Activities</strong>: Click an activity name to open the MicroSim in a new tab</li>
+<li><strong>Earn Stars</strong>: A star is automatically awarded when you click an activity</li>
+<li><strong>Track Progress</strong>: Filled stars show completed activities; progress persists across visits</li>
+<li><strong>Close Panel</strong>: Click outside the panel or the X button to close it</li>
+<li><strong>Reset</strong>: Click "Reset Progress" to clear all stars and start fresh</li>
 </ol>
+<div class="admonition warning">
+<p class="admonition-title">Progress is Browser-Specific</p>
+<p>Your progress is stored in this browser's localStorage on this device only. If you switch to a different computer or use a different browser (e.g., switching from Chrome to Safari), your stars will not appear. For consistent tracking, always use the same browser on the same device.</p>
+</div>
 <h2 id="iframe-example">Iframe Example<a class="headerlink" href="#iframe-example" title="Permanent link">&para;</a></h2>
 <p>You can include this MicroSim on your website using the following <code>iframe</code>:</p>
 <div class="language-html highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -1873,11 +1964,87 @@
 <ul>
 <li>Uses p5.js for interactive graphics and animations</li>
 <li>Curved path drawn with bezier curves</li>
-<li>Progress data simulated (not persistent in this demo)</li>
-<li>Click detection for station selection</li>
-<li>Hover effects for interactivity</li>
+<li>Progress stored in browser localStorage (key: <code>readingProgressPath</code>)</li>
+<li>Tracks individual skill completions per station</li>
+<li>Click detection for stations and activity links</li>
+<li>Hover effects highlight clickable activities</li>
 <li>Touch and mouse support</li>
 <li>Responsive design adapts to container width</li>
+</ul>
+<h2 id="design-tradeoffs">Design Tradeoffs<a class="headerlink" href="#design-tradeoffs" title="Permanent link">&para;</a></h2>
+<p>This progress tracking approach has specific tradeoffs worth understanding:</p>
+<h3 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>No MicroSim Changes</strong></td>
+<td>Individual MicroSims require no modification; all tracking logic is self-contained</td>
+</tr>
+<tr>
+<td><strong>Simple Architecture</strong></td>
+<td>Uses browser-native localStorage with no backend, database, or authentication</td>
+</tr>
+<tr>
+<td><strong>Immediate Feedback</strong></td>
+<td>Stars awarded instantly when clicking, providing positive reinforcement</td>
+</tr>
+<tr>
+<td><strong>Works Offline</strong></td>
+<td>localStorage functions without internet after initial page load</td>
+</tr>
+<tr>
+<td><strong>Privacy-Friendly</strong></td>
+<td>All data stays on the user's device; nothing sent to servers</td>
+</tr>
+</tbody>
+</table>
+<h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entry Point Dependent</strong></td>
+<td>Stars are only awarded when accessing MicroSims through this progress path; using the site navigation bar bypasses tracking</td>
+</tr>
+<tr>
+<td><strong>Browser &amp; Device-Specific</strong></td>
+<td>Progress is stored in this specific browser on this specific device. Using a different computer, or even a different browser on the same computer (e.g., Chrome vs. Safari), will show zero progress</td>
+</tr>
+<tr>
+<td><strong>No Completion Verification</strong></td>
+<td>Stars are awarded on click, not upon actual mastery or completion of the activity</td>
+</tr>
+<tr>
+<td><strong>Data Fragility</strong></td>
+<td>Clearing browser data, incognito mode, or switching browsers loses all progress</td>
+</tr>
+<tr>
+<td><strong>Single User</strong></td>
+<td>No user accounts; multiple children sharing a device share the same progress</td>
+</tr>
+<tr>
+<td><strong>No Teacher Dashboard</strong></td>
+<td>Teachers cannot view student progress since data is local-only</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alternative-approaches">Alternative Approaches<a class="headerlink" href="#alternative-approaches" title="Permanent link">&para;</a></h3>
+<p>For deployments requiring cross-device sync or teacher visibility, consider:</p>
+<ul>
+<li><strong>MicroSim-initiated tracking</strong>: Each MicroSim writes to localStorage on completion (requires modifying all MicroSims)</li>
+<li><strong>Backend storage</strong>: Server-side database with user accounts (adds hosting complexity)</li>
+<li><strong>LMS integration</strong>: Connect to learning management systems via LTI or xAPI standards</li>
 </ul>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
