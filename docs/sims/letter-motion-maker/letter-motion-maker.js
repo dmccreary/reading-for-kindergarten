@@ -11,32 +11,32 @@ let margin = 10;
 
 // Letter motions - each letter has an associated body movement
 const letterMotions = [
-  { letter: 'A', motion: 'Arms up in a point like a tent', emoji: '⛺', pose: 'tent' },
-  { letter: 'B', motion: 'Hands on belly, stick out tummy', emoji: '🤰', pose: 'belly' },
-  { letter: 'C', motion: 'Curve arms like holding a ball', emoji: '🏀', pose: 'curve' },
-  { letter: 'D', motion: 'One arm straight, one curved', emoji: '🚪', pose: 'door' },
-  { letter: 'E', motion: 'Arms out at three levels', emoji: '📚', pose: 'shelves' },
-  { letter: 'F', motion: 'Arms out at top two levels', emoji: '🚩', pose: 'flag' },
-  { letter: 'G', motion: 'Curve arms, point one finger in', emoji: '🌀', pose: 'spiral' },
-  { letter: 'H', motion: 'Arms down, hands at sides', emoji: '🧍', pose: 'standing' },
-  { letter: 'I', motion: 'Stand straight, arms at sides', emoji: '🕯️', pose: 'candle' },
-  { letter: 'J', motion: 'One arm up, curve at bottom', emoji: '🪝', pose: 'hook' },
-  { letter: 'K', motion: 'One arm straight, other at angle', emoji: '⚔️', pose: 'kick' },
-  { letter: 'L', motion: 'One arm down, one out straight', emoji: '📐', pose: 'corner' },
-  { letter: 'M', motion: 'Arms up, hands touch at top', emoji: '⛰️', pose: 'mountain' },
-  { letter: 'N', motion: 'Arms up in zigzag shape', emoji: '⚡', pose: 'zigzag' },
-  { letter: 'O', motion: 'Arms in big circle in front', emoji: '⭕', pose: 'circle' },
-  { letter: 'P', motion: 'One arm up with fist on top', emoji: '🎈', pose: 'balloon' },
-  { letter: 'Q', motion: 'Arms circle, kick one leg out', emoji: '👸', pose: 'queen' },
-  { letter: 'R', motion: 'One arm up, other kicks out', emoji: '🚀', pose: 'rocket' },
-  { letter: 'S', motion: 'Sway body in S curve', emoji: '🐍', pose: 'snake' },
-  { letter: 'T', motion: 'Arms straight out to sides', emoji: '✝️', pose: 'cross' },
-  { letter: 'U', motion: 'Arms curve down like a cup', emoji: '🥤', pose: 'cup' },
-  { letter: 'V', motion: 'Arms down in V shape', emoji: '✌️', pose: 'victory' },
-  { letter: 'W', motion: 'Arms make double V down', emoji: '🌊', pose: 'wave' },
-  { letter: 'X', motion: 'Cross arms in front', emoji: '❌', pose: 'cross-arms' },
-  { letter: 'Y', motion: 'Arms up in Y shape', emoji: '🙌', pose: 'cheer' },
-  { letter: 'Z', motion: 'Arms zigzag left to right', emoji: '⚡', pose: 'lightning' }
+  { letter: 'A', motion: 'Arms down in a V, hands meet at bottom, bar across middle', emoji: '🔺', pose: 'tent' },
+  { letter: 'B', motion: 'One arm straight down, other makes two bumps', emoji: '🅱️', pose: 'belly' },
+  { letter: 'C', motion: 'Curve both arms to one side like a big C', emoji: '🌙', pose: 'curve' },
+  { letter: 'D', motion: 'One arm straight down, other curves out like a belly', emoji: '🚪', pose: 'door' },
+  { letter: 'E', motion: 'One arm down, three arms out like shelves', emoji: '📚', pose: 'shelves' },
+  { letter: 'F', motion: 'One arm down, two arms out at top like a flag', emoji: '🚩', pose: 'flag' },
+  { letter: 'G', motion: 'Curve arms like C, point one finger inward', emoji: '🌀', pose: 'spiral' },
+  { letter: 'H', motion: 'Two arms straight down, connect with bar across', emoji: '🪜', pose: 'standing' },
+  { letter: 'I', motion: 'Stand straight like a candle with arms out at top and bottom', emoji: '🕯️', pose: 'candle' },
+  { letter: 'J', motion: 'Arm straight down with a hook at the bottom', emoji: '🪝', pose: 'hook' },
+  { letter: 'K', motion: 'One arm straight down, two arms kick out from middle', emoji: '⚔️', pose: 'kick' },
+  { letter: 'L', motion: 'One arm down, then kick out to the side at bottom', emoji: '📐', pose: 'corner' },
+  { letter: 'M', motion: 'Arms make two mountain peaks going up and down', emoji: '⛰️', pose: 'mountain' },
+  { letter: 'N', motion: 'Two arms straight down with a diagonal between', emoji: '📐', pose: 'zigzag' },
+  { letter: 'O', motion: 'Arms make a big round circle', emoji: '⭕', pose: 'circle' },
+  { letter: 'P', motion: 'One arm straight down, loop at top like a balloon', emoji: '🎈', pose: 'balloon' },
+  { letter: 'Q', motion: 'Make a circle and add a little tail', emoji: '👸', pose: 'queen' },
+  { letter: 'R', motion: 'One arm down, loop at top, leg kicks out', emoji: '🚀', pose: 'rocket' },
+  { letter: 'S', motion: 'Sway your body in a curvy S snake shape', emoji: '🐍', pose: 'snake' },
+  { letter: 'T', motion: 'Arms straight out on top, body straight down', emoji: '✝️', pose: 'cross' },
+  { letter: 'U', motion: 'Two arms down with a curved bottom like a cup', emoji: '🥤', pose: 'cup' },
+  { letter: 'V', motion: 'Arms down and out wide in V shape', emoji: '✌️', pose: 'victory' },
+  { letter: 'W', motion: 'Arms zigzag up and down like waves', emoji: '🌊', pose: 'wave' },
+  { letter: 'X', motion: 'Cross both arms diagonally making an X', emoji: '❌', pose: 'cross-arms' },
+  { letter: 'Y', motion: 'Arms up in Y shape, body straight down', emoji: '🙌', pose: 'cheer' },
+  { letter: 'Z', motion: 'Arms zigzag: across top, diagonal down, across bottom', emoji: '⚡', pose: 'lightning' }
 ];
 
 // Game state
@@ -243,98 +243,231 @@ function drawStickFigure() {
 }
 
 function drawArms(pose) {
-  let armLen = 45;
+  let armLen = 50;
   let anim = showDemo ? sin(demoFrame * 0.1) : 0;
 
   switch (pose) {
-    case 'tent': // A - arms up in point
-      line(0, -30, -30 + anim * 5, -70);
-      line(0, -30, 30 - anim * 5, -70);
+    case 'tent': // A - arms down in inverted V with crossbar
+      // Two arms pointing down meeting at bottom (the A shape)
+      line(0, -30, -35 - anim * 3, 30);  // Left arm down
+      line(0, -30, 35 + anim * 3, 30);   // Right arm down
+      // Crossbar in middle
+      line(-18, 0, 18, 0);
       break;
 
-    case 'belly': // B - hands on belly
-      line(0, -30, -25, -10);
-      line(0, -30, 25, -10);
+    case 'belly': // B - vertical back with two curved bumps
+      // Left arm straight down (the back of B)
+      line(0, -30, -30, -30);
+      line(-30, -30, -30, 25);
+      // Right arm makes two curved bumps
+      noFill();
+      arc(-30, -15, 35, 30, -HALF_PI, HALF_PI);  // Top bump
+      arc(-30, 10, 35, 30, -HALF_PI, HALF_PI);   // Bottom bump
       break;
 
-    case 'curve': // C - curved arms
+    case 'curve': // C - arms curve to left making C shape
       noFill();
       strokeWeight(5);
-      arc(-30, -20, 40, 60, -HALF_PI, HALF_PI);
+      // Both arms curve left to form C
+      arc(10, -5, 70 + anim * 5, 80, HALF_PI + 0.5, PI + HALF_PI - 0.5);
       break;
 
-    case 'shelves': // E - three levels
-      line(0, -30, -armLen, -30);
-      line(0, -10, -armLen * 0.8, -10);
-      line(0, 10, -armLen * 0.6, 10);
+    case 'door': // D - straight back with curved front
+      // Left side straight (back of D)
+      line(-25, -40, -25, 25);
+      // Right side curved (front of D)
+      noFill();
+      arc(-25, -7, 60, 66, -HALF_PI, HALF_PI);
       break;
 
-    case 'cross': // T - arms straight out
-      line(0, -30, -armLen - anim * 5, -30);
-      line(0, -30, armLen + anim * 5, -30);
+    case 'shelves': // E - vertical with three horizontal prongs
+      // Vertical line
+      line(-30, -35, -30, 25);
+      // Three horizontal prongs
+      line(-30, -35, 15 + anim * 3, -35);  // Top
+      line(-30, -5, 10, -5);               // Middle
+      line(-30, 25, 15 + anim * 3, 25);    // Bottom
       break;
 
-    case 'cheer': // Y - arms up in Y
-      line(0, -30, -35 - anim * 5, -70);
-      line(0, -30, 35 + anim * 5, -70);
+    case 'flag': // F - vertical with two horizontal prongs at top
+      // Vertical line
+      line(-30, -35, -30, 25);
+      // Two horizontal prongs at top
+      line(-30, -35, 15 + anim * 3, -35);  // Top
+      line(-30, -10, 10, -10);             // Middle
       break;
 
-    case 'victory': // V - arms down in V
-      line(0, -30, -35, 20);
-      line(0, -30, 35, 20);
-      break;
-
-    case 'wave': // W - double V
-      line(0, -30, -25, 10);
-      line(0, -30, -10, -10);
-      line(0, -30, 10, -10);
-      line(0, -30, 25, 10);
-      break;
-
-    case 'circle': // O - big circle
+    case 'spiral': // G - C shape with inward horizontal bar
       noFill();
       strokeWeight(5);
-      ellipse(0, -10, 80 + anim * 10, 70);
+      // C curve
+      arc(5, -5, 65, 75, HALF_PI + 0.3, PI + HALF_PI - 0.3);
+      // Inward pointing bar
+      strokeWeight(5);
+      line(5, -5, -15, -5);
       break;
 
-    case 'mountain': // M - arms up touching
-      line(0, -30, -30, -70);
-      line(0, -30, 0, -55);
-      line(0, -30, 30, -70);
+    case 'standing': // H - two verticals with crossbar
+      // Two vertical arms
+      line(-25, -35, -25, 25);
+      line(25, -35, 25, 25);
+      // Horizontal crossbar
+      line(-25, -5 + anim * 3, 25, -5 + anim * 3);
       break;
 
-    case 'corner': // L - corner shape
-      line(0, -30, 0, 20);
-      line(0, 20, 40, 20);
+    case 'candle': // I - simple vertical with serifs
+      line(0, -35, 0, 25);
+      // Top and bottom serifs
+      line(-15, -35, 15, -35);
+      line(-15, 25, 15, 25);
       break;
 
-    case 'candle': // I - straight down
-      line(0, -30, 0, 20);
+    case 'hook': // J - vertical with curved hook at bottom
+      line(0, -35, 0, 15);
+      // Top serif
+      line(-15, -35, 15, -35);
+      // Hook at bottom
+      noFill();
+      arc(-15, 15, 30, 25, 0, PI);
       break;
 
-    case 'hook': // J - hook shape
-      line(0, -30, 0, 20);
-      arc(-15, 20, 30, 20, 0, PI);
+    case 'kick': // K - vertical with two diagonal arms meeting at middle
+      // Vertical
+      line(-25, -35, -25, 25);
+      // Upper diagonal (going up-right)
+      line(-25, -5, 20 + anim * 3, -40);
+      // Lower diagonal (going down-right)
+      line(-25, -5, 20 + anim * 3, 25);
       break;
 
-    case 'cross-arms': // X - crossed
-      line(-30, -50, 30, 10);
-      line(30, -50, -30, 10);
+    case 'corner': // L - vertical then horizontal
+      // Vertical down
+      line(-20, -35, -20, 25);
+      // Horizontal right
+      line(-20, 25, 30 + anim * 3, 25);
       break;
 
-    case 'snake': // S - wavy
+    case 'mountain': // M - two peaks
+      // Left vertical
+      line(-35, 25, -35, -35);
+      // Up to first peak
+      line(-35, -35, -10, -5);
+      // Down to valley and up to second peak
+      line(-10, -5, 10, -35);
+      // Right vertical
+      line(10, -35, 35, -5);
+      line(35, -5, 35, 25);
+      break;
+
+    case 'zigzag': // N - two verticals with diagonal
+      // Left vertical
+      line(-25, -35, -25, 25);
+      // Diagonal from top-left to bottom-right
+      line(-25, -35, 25, 25);
+      // Right vertical
+      line(25, -35, 25, 25);
+      break;
+
+    case 'circle': // O - arms make full circle
+      noFill();
+      strokeWeight(5);
+      ellipse(0, -5, 70 + anim * 8, 75);
+      break;
+
+    case 'balloon': // P - vertical with loop at top
+      // Vertical line
+      line(-25, -35, -25, 25);
+      // Loop at top
+      noFill();
+      arc(-25, -20, 40, 35, -HALF_PI, HALF_PI);
+      break;
+
+    case 'queen': // Q - circle with diagonal tail
+      noFill();
+      strokeWeight(5);
+      ellipse(0, -10, 60, 60);
+      // Diagonal tail
+      strokeWeight(5);
+      line(15, 10, 35 + anim * 5, 35);
+      break;
+
+    case 'rocket': // R - like P but with diagonal leg
+      // Vertical line
+      line(-25, -35, -25, 25);
+      // Loop at top
+      noFill();
+      arc(-25, -20, 40, 35, -HALF_PI, HALF_PI);
+      // Diagonal leg kicking out
+      line(-5, -3, 25 + anim * 3, 25);
+      break;
+
+    case 'snake': // S - curvy S shape
+      noFill();
+      strokeWeight(5);
       push();
-      rotate(anim * 0.3);
-      noFill();
+      rotate(anim * 0.2);
+      // S curve using bezier
       beginShape();
-      vertex(-20, -40);
-      bezierVertex(-40, -30, -10, -10, -30, 0);
-      bezierVertex(-50, 10, -10, 20, -30, 30);
+      vertex(20, -40);
+      bezierVertex(-20, -40, 30, -10, -5, -5);
+      bezierVertex(-40, 0, 30, 30, -10, 30);
       endShape();
       pop();
       break;
 
-    default: // Default - arms down
+    case 'cross': // T - horizontal on top of vertical
+      // Horizontal top
+      line(-armLen - anim * 3, -35, armLen + anim * 3, -35);
+      // Vertical down from center
+      line(0, -35, 0, 25);
+      break;
+
+    case 'cup': // U - two verticals connected by curve at bottom
+      // Left vertical
+      line(-25, -35, -25, 5);
+      // Curved bottom
+      noFill();
+      arc(0, 5, 50, 40, 0, PI);
+      // Right vertical
+      line(25, -35, 25, 5);
+      break;
+
+    case 'victory': // V - arms down in V shape
+      line(0, 25, -35 - anim * 3, -35);
+      line(0, 25, 35 + anim * 3, -35);
+      break;
+
+    case 'wave': // W - double V pointing down
+      // Four points making W shape
+      line(-35, -35, -18, 25);
+      line(-18, 25, 0, -10);
+      line(0, -10, 18, 25);
+      line(18, 25, 35, -35);
+      break;
+
+    case 'cross-arms': // X - two diagonals crossing
+      line(-30, -40, 30 + anim * 3, 25);
+      line(30, -40, -30 - anim * 3, 25);
+      break;
+
+    case 'cheer': // Y - arms up in Y, then vertical down
+      // Two arms up
+      line(0, -10, -35 - anim * 3, -45);
+      line(0, -10, 35 + anim * 3, -45);
+      // Vertical down from junction
+      line(0, -10, 0, 25);
+      break;
+
+    case 'lightning': // Z - horizontal zigzag
+      // Top horizontal
+      line(-25, -35, 25 + anim * 3, -35);
+      // Diagonal down-left
+      line(25, -35, -25, 25);
+      // Bottom horizontal
+      line(-25, 25, 25 + anim * 3, 25);
+      break;
+
+    default: // Default - arms down at sides
       line(0, -30, -30, 10);
       line(0, -30, 30, 10);
   }
