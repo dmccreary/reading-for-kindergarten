@@ -4,34 +4,35 @@
 
 // Canvas dimensions
 let canvasWidth = 400;
-let drawHeight = 400;
+let drawHeight = 420;
 let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 10;
 
 // Consonant data with sounds, example words, and emojis
+// soundText: what TTS will say; soundDisplay: what's shown on screen
 const consonantData = {
-  'B': {sound: 'buh', word: 'ball', emoji: '⚽', color: '#E74C3C'},
-  'C': {sound: 'kuh', word: 'cat', emoji: '🐱', color: '#3498DB'},
-  'D': {sound: 'duh', word: 'dog', emoji: '🐕', color: '#2ECC71'},
-  'F': {sound: 'fff', word: 'fish', emoji: '🐟', color: '#9B59B6'},
-  'G': {sound: 'guh', word: 'goat', emoji: '🐐', color: '#F39C12'},
-  'H': {sound: 'huh', word: 'hat', emoji: '🎩', color: '#1ABC9C'},
-  'J': {sound: 'juh', word: 'jam', emoji: '🍯', color: '#E91E63'},
-  'K': {sound: 'kuh', word: 'kite', emoji: '🪁', color: '#00BCD4'},
-  'L': {sound: 'lll', word: 'lion', emoji: '🦁', color: '#FF9800'},
-  'M': {sound: 'mmm', word: 'moon', emoji: '🌙', color: '#673AB7'},
-  'N': {sound: 'nnn', word: 'nest', emoji: '🪹', color: '#795548'},
-  'P': {sound: 'puh', word: 'pig', emoji: '🐷', color: '#FF5722'},
-  'Q': {sound: 'kwuh', word: 'queen', emoji: '👸', color: '#607D8B'},
-  'R': {sound: 'rrr', word: 'rain', emoji: '🌧️', color: '#4CAF50'},
-  'S': {sound: 'sss', word: 'sun', emoji: '☀️', color: '#FFEB3B'},
-  'T': {sound: 'tuh', word: 'turtle', emoji: '🐢', color: '#009688'},
-  'V': {sound: 'vvv', word: 'van', emoji: '🚐', color: '#8BC34A'},
-  'W': {sound: 'wuh', word: 'water', emoji: '💧', color: '#03A9F4'},
-  'X': {sound: 'ks', word: 'fox', emoji: '🦊', color: '#FF4081'},
-  'Y': {sound: 'yuh', word: 'yellow', emoji: '💛', color: '#FFC107'},
-  'Z': {sound: 'zzz', word: 'zebra', emoji: '🦓', color: '#9E9E9E'}
+  'B': {soundText: 'buh', soundDisplay: '/b/', word: 'ball', emoji: '⚽', color: '#E74C3C'},
+  'C': {soundText: 'kuh', soundDisplay: '/k/', word: 'cat', emoji: '🐱', color: '#3498DB'},
+  'D': {soundText: 'duh', soundDisplay: '/d/', word: 'dog', emoji: '🐕', color: '#2ECC71'},
+  'F': {soundText: 'fuh', soundDisplay: '/f/', word: 'fish', emoji: '🐟', color: '#9B59B6'},
+  'G': {soundText: 'guh', soundDisplay: '/g/', word: 'goat', emoji: '🐐', color: '#F39C12'},
+  'H': {soundText: 'huh', soundDisplay: '/h/', word: 'hat', emoji: '🎩', color: '#1ABC9C'},
+  'J': {soundText: 'juh', soundDisplay: '/j/', word: 'jam', emoji: '🍯', color: '#E91E63'},
+  'K': {soundText: 'kah', soundDisplay: '/k/', word: 'kite', emoji: '🪁', color: '#00BCD4'},
+  'L': {soundText: 'luh', soundDisplay: '/l/', word: 'lion', emoji: '🦁', color: '#FF9800'},
+  'M': {soundText: 'muh', soundDisplay: '/m/', word: 'moon', emoji: '🌙', color: '#673AB7'},
+  'N': {soundText: 'nuh', soundDisplay: '/n/', word: 'nest', emoji: '🪹', color: '#795548'},
+  'P': {soundText: 'puh', soundDisplay: '/p/', word: 'pig', emoji: '🐷', color: '#FF5722'},
+  'Q': {soundText: 'kwuh', soundDisplay: '/kw/', word: 'queen', emoji: '👸', color: '#607D8B'},
+  'R': {soundText: 'ruh', soundDisplay: '/r/', word: 'rain', emoji: '🌧️', color: '#4CAF50'},
+  'S': {soundText: 'sah', soundDisplay: '/s/', word: 'sun', emoji: '☀️', color: '#FFEB3B'},
+  'T': {soundText: 'tuh', soundDisplay: '/t/', word: 'turtle', emoji: '🐢', color: '#009688'},
+  'V': {soundText: 'vuh', soundDisplay: '/v/', word: 'van', emoji: '🚐', color: '#8BC34A'},
+  'W': {soundText: 'wuh', soundDisplay: '/w/', word: 'water', emoji: '💧', color: '#03A9F4'},
+  'X': {soundText: 'eks', soundDisplay: '/ks/', word: 'fox', emoji: '🦊', color: '#FF4081'},
+  'Y': {soundText: 'yuh', soundDisplay: '/y/', word: 'yellow', emoji: '💛', color: '#FFC107'},
+  'Z': {soundText: 'zuh', soundDisplay: '/z/', word: 'zebra', emoji: '🦓', color: '#9E9E9E'}
 };
 
 const consonants = Object.keys(consonantData);
@@ -51,9 +52,15 @@ function setup() {
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
+  // Preload voices for speech synthesis (Chrome loads them async)
+  if ('speechSynthesis' in window) {
+    speechSynthesis.getVoices();
+    speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
+  }
+
   // Create Play Sound button
   playAgainButton = createButton('Hear Again');
-  playAgainButton.position(margin, drawHeight + 12);
+  playAgainButton.position(margin, drawHeight + 8);
   playAgainButton.mousePressed(playSoundAgain);
   playAgainButton.style('font-size', '16px');
   playAgainButton.style('padding', '8px 16px');
@@ -73,7 +80,7 @@ function draw() {
   updateCanvasSize();
 
   // Drawing area background
-  fill('#FFF3E0');
+  fill('aliceblue');
   stroke('silver');
   strokeWeight(1);
   rect(0, 0, canvasWidth, drawHeight);
@@ -162,7 +169,7 @@ function drawLetterGrid() {
     // Button shadow
     fill(0, 0, 0, 30);
     noStroke();
-    rect(-btn.size/2 * scale + 3, 3, btn.size * scale, btn.size * scale, 10);
+    rect(-btn.size/2 * scale + 5, -btn.size/2 * scale + 5, btn.size * scale, btn.size * scale, 10);
 
     // Button background
     if (isSelected) {
@@ -221,7 +228,7 @@ function drawSelectedLetterDisplay() {
   fill('#666');
   textSize(16);
   textAlign(CENTER, TOP);
-  text('"' + selectedLetter + '" says /' + data.sound + '/', canvasWidth/2, 385);
+  text('"' + selectedLetter + '" says ' + data.soundDisplay, canvasWidth/2, 385);
   text('like in "' + data.word + '"', canvasWidth/2, 405);
 }
 
@@ -314,21 +321,31 @@ function playLetterSound(letter) {
   // Cancel any ongoing speech
   speechSynthesis.cancel();
 
-  // Speak the sound
+  // Get a good voice for phonics (prefer Samantha on Mac Chrome)
+  let voices = speechSynthesis.getVoices();
+  let preferredVoice = voices.find(v => v.name === 'Samantha') ||
+                       voices.find(v => v.name.includes('Samantha')) ||
+                       voices.find(v => v.lang.startsWith('en') && v.localService) ||
+                       voices[0];
+
+  // Speak the sound with emphasis
   setTimeout(() => {
-    let soundUtterance = new SpeechSynthesisUtterance(data.sound);
-    soundUtterance.rate = 0.7;
-    soundUtterance.pitch = 1.0;
+    let soundUtterance = new SpeechSynthesisUtterance(data.soundText);
+    soundUtterance.rate = 0.5;  // Slower for clearer phoneme
+    soundUtterance.pitch = 1.1;
+    soundUtterance.volume = 1.0;
+    if (preferredVoice) soundUtterance.voice = preferredVoice;
     speechSynthesis.speak(soundUtterance);
   }, 100);
 
   // Then speak "like in [word]"
   setTimeout(() => {
     let wordUtterance = new SpeechSynthesisUtterance('like in ' + data.word);
-    wordUtterance.rate = 0.9;
-    wordUtterance.pitch = 1.1;
+    wordUtterance.rate = 0.85;
+    wordUtterance.pitch = 1.0;
+    if (preferredVoice) wordUtterance.voice = preferredVoice;
     speechSynthesis.speak(wordUtterance);
-  }, 800);
+  }, 900);
 
   // Play a nice tone
   playSelectTone(letter);

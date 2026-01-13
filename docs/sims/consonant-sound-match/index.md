@@ -11,7 +11,7 @@ social:
 
 # Consonant Sound Match
 
-<iframe src="main.html" height="452px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="472px" width="100%" scrolling="no"></iframe>
 
 [Run the Consonant Sound Match MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 

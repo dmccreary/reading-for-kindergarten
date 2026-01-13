@@ -58,3 +58,18 @@ Each MicroSim lives in `docs/sims/<name>/` with:
 
 - `mkdocs.yml` - Site configuration, navigation, theme settings
 - `docs/css/extra.css` - Custom brand styling
+
+## Speech Synthesis for Phonemes
+
+When using the Web Speech API (`speechSynthesis`) for letter sounds in MicroSims:
+
+- TTS reads literal letters like 'fff' or 'sss' as spelled-out letter names ("eff eff eff")
+- Use pronounceable syllables instead: `soundText` for TTS, `soundDisplay` for screen (e.g., `/s/`)
+- Recommended phoneme mappings for Chrome on Mac:
+  - Stop consonants: 'buh', 'duh', 'guh', 'kah', 'puh', 'tuh'
+  - Fricatives: 'fuh', 'sah', 'vuh', 'zuh', 'huh'
+  - Nasals/liquids: 'muh', 'nuh', 'luh', 'ruh'
+  - Other: 'juh', 'wuh', 'yuh', 'kwuh' (Q), 'eks' (X)
+- Prefer the "Samantha" voice on Mac for clearer phonics
+- Use slower speech rate (0.5) for phoneme sounds
+- Preload voices in setup() since Chrome loads them asynchronously
