@@ -2,6 +2,9 @@
 
 This section contains MicroSims - interactive educational simulations designed to help kindergarten students learn reading skills through hands-on exploration.
 
+!!! tip "Start with the Reading Progress Path"
+    For the best experience, use the **[Reading Progress Path](./reading-progress-path/index.md)** to navigate through all MicroSims. It opens each activity in a new tab and tracks your progress with stars. This helps students see their learning journey and keeps track of which activities they've completed.
+
 ## What are MicroSims?
 
 MicroSims are small, focused interactive simulations that teach specific reading skills. Each MicroSim uses p5.js for graphics, Web Speech API for audio, and provides immediate feedback to keep young learners engaged.
