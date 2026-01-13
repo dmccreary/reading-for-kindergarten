@@ -17,17 +17,19 @@ social:
 
 ## About This MicroSim
 
-The Reading Progress Path provides a visual overview of the reading journey, showing how skills build on each other from letter recognition to fluent reading. Each station on the path represents a skill area with links to related MicroSims. Progress is visualized through stars, motivating continued practice.
+The Reading Progress Path provides a visual overview of the reading journey, showing how skills build on each other from letter recognition to fluent reading. Each station on the path represents a skill area with clickable links to related MicroSims. Progress is tracked using browser localStorage and visualized through stars, motivating continued practice.
 
 ### Features
 
 - **6 Skill Stations**: Letters, Sounds, Letter-Sound, Blending, Sight Words, Reading
 - **Visual Path**: Winding road connecting skill areas
-- **Progress Stars**: Track completion of activities
-- **Detail Panels**: Click stations to see activities
+- **Clickable Activities**: Click any activity to open its MicroSim and earn a star
+- **Persistent Progress**: Stars are saved to browser localStorage and persist across sessions (note: progress is specific to this browser on this device)
+- **Detail Panels**: Click stations to see available activities
 - **Color Coding**: Each skill area has unique color
 - **Emoji Icons**: Visual representation of each skill
 - **Total Progress**: Overall star count displayed
+- **Reset Option**: Clear all progress to start fresh
 
 ### Skill Stations
 
@@ -43,11 +45,15 @@ The Reading Progress Path provides a visual overview of the reading journey, sho
 ### How to Use
 
 1. **View the Path**: See the journey from Letters to Reading
-2. **Click Stations**: Tap any station to see details
-3. **View Activities**: See which activities are available
-4. **Track Stars**: Stars show activities completed
-5. **Navigate**: Click outside panel to close it
-6. **Reset**: Clear progress to start fresh
+2. **Click Stations**: Tap any station to open its detail panel
+3. **Launch Activities**: Click an activity name to open the MicroSim in a new tab
+4. **Earn Stars**: A star is automatically awarded when you click an activity
+5. **Track Progress**: Filled stars show completed activities; progress persists across visits
+6. **Close Panel**: Click outside the panel or the X button to close it
+7. **Reset**: Click "Reset Progress" to clear all stars and start fresh
+
+!!! warning "Progress is Browser-Specific"
+    Your progress is stored in this browser's localStorage on this device only. If you switch to a different computer or use a different browser (e.g., switching from Chrome to Safari), your stars will not appear. For consistent tracking, always use the same browser on the same device.
 
 ## Iframe Example
 
@@ -116,11 +122,45 @@ The Progress Path serves as:
 
 - Uses p5.js for interactive graphics and animations
 - Curved path drawn with bezier curves
-- Progress data simulated (not persistent in this demo)
-- Click detection for station selection
-- Hover effects for interactivity
+- Progress stored in browser localStorage (key: `readingProgressPath`)
+- Tracks individual skill completions per station
+- Click detection for stations and activity links
+- Hover effects highlight clickable activities
 - Touch and mouse support
 - Responsive design adapts to container width
+
+## Design Tradeoffs
+
+This progress tracking approach has specific tradeoffs worth understanding:
+
+### Advantages
+
+| Benefit | Description |
+|---------|-------------|
+| **No MicroSim Changes** | Individual MicroSims require no modification; all tracking logic is self-contained |
+| **Simple Architecture** | Uses browser-native localStorage with no backend, database, or authentication |
+| **Immediate Feedback** | Stars awarded instantly when clicking, providing positive reinforcement |
+| **Works Offline** | localStorage functions without internet after initial page load |
+| **Privacy-Friendly** | All data stays on the user's device; nothing sent to servers |
+
+### Limitations
+
+| Limitation | Description |
+|------------|-------------|
+| **Entry Point Dependent** | Stars are only awarded when accessing MicroSims through this progress path; using the site navigation bar bypasses tracking |
+| **Browser & Device-Specific** | Progress is stored in this specific browser on this specific device. Using a different computer, or even a different browser on the same computer (e.g., Chrome vs. Safari), will show zero progress |
+| **No Completion Verification** | Stars are awarded on click, not upon actual mastery or completion of the activity |
+| **Data Fragility** | Clearing browser data, incognito mode, or switching browsers loses all progress |
+| **Single User** | No user accounts; multiple children sharing a device share the same progress |
+| **No Teacher Dashboard** | Teachers cannot view student progress since data is local-only |
+
+### Alternative Approaches
+
+For deployments requiring cross-device sync or teacher visibility, consider:
+
+- **MicroSim-initiated tracking**: Each MicroSim writes to localStorage on completion (requires modifying all MicroSims)
+- **Backend storage**: Server-side database with user accounts (adds hosting complexity)
+- **LMS integration**: Connect to learning management systems via LTI or xAPI standards
 
 ## References
 
