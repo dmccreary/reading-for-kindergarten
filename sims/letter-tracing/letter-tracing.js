@@ -325,18 +325,18 @@ function setup() {
 
   // Create Previous button
   prevButton = createButton('< Prev');
-  prevButton.position(margin, drawHeight + 12);
+  prevButton.position(margin, drawHeight + 6);
   prevButton.mousePressed(previousLetter);
   prevButton.style('font-size', '16px');
-  prevButton.style('padding', '8px 12px');
+  prevButton.style('padding', '6px 12px');
   prevButton.style('cursor', 'pointer');
 
   // Create Next button
   nextButton = createButton('Next >');
-  nextButton.position(margin + 80, drawHeight + 12);
+  nextButton.position(margin + 80, drawHeight + 6);
   nextButton.mousePressed(nextLetter);
   nextButton.style('font-size', '16px');
-  nextButton.style('padding', '8px 12px');
+  nextButton.style('padding', '6px 12px');
   nextButton.style('cursor', 'pointer');
 
   // Create Uppercase checkbox
@@ -347,15 +347,15 @@ function setup() {
 
   // Create Speak button
   speakButton = createButton('Hear Letter');
-  speakButton.position(canvasWidth - 110, drawHeight + 12);
+  speakButton.position(canvasWidth - 114, drawHeight + 8);
   speakButton.mousePressed(speakCurrentLetter);
   speakButton.style('font-size', '16px');
-  speakButton.style('padding', '8px 12px');
+  speakButton.style('padding', '6px 12px');
   speakButton.style('cursor', 'pointer');
   speakButton.style('background-color', '#4CAF50');
   speakButton.style('color', 'white');
   speakButton.style('border', 'none');
-  speakButton.style('border-radius', '5px');
+  speakButton.style('border-radius', '4px');
 
   textFont('Arial');
   currentTrailColor = random(trailColors);

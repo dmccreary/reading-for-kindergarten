@@ -258,7 +258,7 @@ function drawStars() {
     textSize(14);
     textAlign(CENTER, CENTER);
     noStroke();
-    text('Stars will appear as you tap!', canvasWidth/2, y);
+    text('Stars will appear as you tap!', canvasWidth/2, y+50);
   }
 }
 
