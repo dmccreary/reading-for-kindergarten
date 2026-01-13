@@ -1,16 +1,16 @@
 # FAQ Quality Report
 
-Generated: 2026-01-13
+Generated: 2026-01-13 (Updated with Speech Synthesis section)
 
 ## Overall Statistics
 
 | Metric | Value |
 |--------|-------|
-| **Total Questions** | 57 |
-| **Overall Quality Score** | 88/100 |
+| **Total Questions** | 66 |
+| **Overall Quality Score** | 89/100 |
 | **Content Completeness Score** | 98/100 |
-| **Concept Coverage** | 78% (76/97 core concepts) |
-| **Example Coverage** | 53% (30/57 questions) |
+| **Concept Coverage** | 82% (80/97 core concepts) |
+| **Example Coverage** | 48% (32/66 questions) |
 | **Link Coverage** | 100% (all answers link to source) |
 
 ## Category Breakdown
@@ -20,6 +20,7 @@ Generated: 2026-01-13
 | Getting Started | 10 | 41 | Remember/Understand |
 | Core Concepts | 15 | 40 | Understand/Apply |
 | Technical Details | 10 | 39 | Remember/Understand |
+| Speech Synthesis and Audio | 9 | 47 | Understand/Apply |
 | Common Challenges | 8 | 42 | Apply/Analyze |
 | Best Practices | 8 | 41 | Apply/Evaluate |
 | Advanced Topics | 6 | 41 | Analyze/Evaluate |
@@ -28,14 +29,14 @@ Generated: 2026-01-13
 
 | Level | Count | Percentage | Target | Deviation |
 |-------|-------|------------|--------|-----------|
-| Remember | 12 | 21% | 20% | +1% |
-| Understand | 24 | 42% | 30% | +12% |
-| Apply | 13 | 23% | 25% | -2% |
-| Analyze | 6 | 11% | 15% | -4% |
-| Evaluate | 4 | 7% | 7% | 0% |
+| Remember | 13 | 20% | 20% | 0% |
+| Understand | 27 | 41% | 30% | +11% |
+| Apply | 16 | 24% | 25% | -1% |
+| Analyze | 7 | 11% | 15% | -4% |
+| Evaluate | 5 | 8% | 7% | +1% |
 | Create | 0 | 0% | 3% | -3% |
 
-**Bloom's Score: 22/25** (deviation within acceptable range, slight overweight on Understand)
+**Bloom's Score: 23/25** (deviation within acceptable range, slight overweight on Understand)
 
 ### Analysis
 

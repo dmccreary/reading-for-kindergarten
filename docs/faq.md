@@ -195,6 +195,89 @@ Uppercase letters (capital letters like A, B, C) and lowercase letters (like a, 
 
 [Sound stretching](glossary.md#sound-stretching) is elongating continuous sounds within a word to help students hear each phoneme clearly. Saying "mmmaaannn" slowly emphasizes each sound in "man." This technique is especially helpful for children who struggle to distinguish sounds in normal speech.
 
+## Speech Synthesis and Audio
+
+### How do the MicroSims produce letter sounds?
+
+The MicroSims use the Web Speech API, a built-in browser feature that converts text to spoken audio. When a child clicks on a letter, the MicroSim sends a text string to the browser's speech synthesis engine, which generates the audio. This approach works without requiring pre-recorded audio files, making the simulations lightweight and easy to maintain.
+
+### What is the Web Speech API?
+
+The Web Speech API is a JavaScript interface built into modern web browsers (Chrome, Safari, Firefox, Edge) that provides text-to-speech (TTS) capabilities. It allows web applications to convert text into spoken words using voices installed on the user's operating system. The API is free to use and requires no external services, though quality and available voices vary by browser and platform.
+
+### Why can't the MicroSims just spell out letter sounds like "fff" or "sss"?
+
+This is a key limitation of text-to-speech technology. When you send literal letters like "fff" or "sss" to a TTS engine, it reads them as spelled-out letter names ("eff eff eff" or "ess ess ess") rather than the phoneme sounds we want children to hear. To work around this, our MicroSims use pronounceable syllables that sound like the target phoneme. For example, we use "fuh" to produce something close to the /f/ sound, and "sah" for /s/.
+
+**Example:** To teach the /b/ sound, we send "buh" to the speech engine rather than "b" or "bbb."
+
+### What phoneme approximations work best with speech synthesis?
+
+Through testing on Chrome with Mac voices, we've found these syllables produce the clearest phoneme approximations:
+
+- **Stop consonants:** "buh" (B), "duh" (D), "guh" (G), "kah" (K), "puh" (P), "tuh" (T)
+- **Fricatives:** "fuh" (F), "sah" (S), "vuh" (V), "zuh" (Z), "huh" (H)
+- **Nasals and liquids:** "muh" (M), "nuh" (N), "luh" (L), "ruh" (R)
+- **Other consonants:** "juh" (J), "wuh" (W), "yuh" (Y), "kwuh" (Q), "eks" (X)
+
+The MicroSims display the proper phonetic notation (like /s/) on screen while sending the pronounceable syllable to the speech engine.
+
+### What are the main limitations of browser speech synthesis for phonics?
+
+Browser speech synthesis has several limitations for phonics instruction:
+
+1. **No true isolated phonemes:** TTS engines are designed for words and sentences, not isolated sounds. They add vowel sounds to consonants, making pure /s/ or /t/ sounds impossible.
+
+2. **Inconsistent across browsers:** The same text may sound different in Chrome versus Safari versus Firefox. Voice quality and availability vary significantly.
+
+3. **Platform differences:** Mac, Windows, iOS, and Android each have different default voices with different characteristics.
+
+4. **No control over pronunciation:** You cannot specify exact phonetic pronunciation—the engine interprets text based on its language rules.
+
+5. **Latency:** There can be a slight delay between requesting speech and hearing it, which can disrupt the flow of interactive activities.
+
+6. **Voice loading:** Some browsers (especially Chrome) load voices asynchronously, so they may not be available immediately when a page loads.
+
+### Which voices work best for phonics instruction?
+
+On Mac systems, the "Samantha" voice tends to produce the clearest phoneme sounds. On Windows, "Microsoft Zira" or "Microsoft David" work reasonably well. For best results:
+
+- Use a slower speech rate (0.5 or lower) to make sounds clearer
+- Select a voice that speaks clearly without excessive inflection
+- Test voices on your specific device, as quality varies
+- Preload voices during page initialization to avoid delays
+
+The MicroSims attempt to select appropriate voices automatically, but results may vary depending on your device and browser.
+
+### Why do sounds sometimes not play in the MicroSims?
+
+Speech synthesis can fail silently for several reasons:
+
+1. **Browser permissions:** Some browsers require user interaction (like a click) before allowing audio playback.
+
+2. **Voices not loaded:** Chrome loads voices asynchronously. If speech is requested before voices are available, it fails silently.
+
+3. **Volume settings:** Check that your device volume is up and not muted.
+
+4. **Browser restrictions:** Some browsers restrict speech synthesis in background tabs or after periods of inactivity.
+
+**Troubleshooting:** Click anywhere on the MicroSim first, ensure your volume is up, and try refreshing the page. If problems persist, try a different browser (Chrome typically has the best support).
+
+### Are the speech synthesis sounds as good as recorded audio?
+
+No. Pre-recorded audio by a trained phonics instructor would be clearer and more accurate for teaching phonemes. However, speech synthesis offers significant advantages:
+
+- **No audio files to download:** Faster loading, works offline
+- **Easy to maintain:** No need to re-record when content changes
+- **Consistent with system:** Uses familiar voices from the device
+- **Accessible:** Works with screen readers and accessibility tools
+
+For classroom use where audio quality is critical, teachers may prefer to model sounds themselves while children use the visual and interactive elements of the MicroSims.
+
+### Can I use the MicroSims without sound?
+
+Yes. While audio reinforcement is helpful, children can still benefit from the visual elements and interactive practice. The letter shapes, matching activities, and immediate feedback work without sound. Parents or teachers can provide the audio modeling themselves while children interact with the simulations.
+
 ## Common Challenges
 
 ### My child knows letter names but not sounds. What should I do?
