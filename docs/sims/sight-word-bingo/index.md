@@ -23,9 +23,10 @@ Sight Word Bingo combines the excitement of a classic game with sight word pract
 ### Features
 
 - **48 Sight Words**: Large pool of Dolch words for varied gameplay
-- **Three Grid Sizes**: 3×3 (Easy), 4×4 (Medium), 5×5 (Hard)
+- **Three Grid Sizes**: 3×3, 4×4, 5×5 for increasing difficulty
 - **Audio Calling**: Each word is spoken aloud clearly
-- **Visual Word Display**: Current word shown on screen
+- **Repeat Button**: Hear the current word again as many times as needed
+- **Show Word Toggle**: Hide the visual word display for audio-only practice (off by default)
 - **Win Detection**: Automatic detection of rows, columns, and diagonals
 - **Celebration**: BINGO announcement and confetti animation
 - **Random Cards**: New unique card each game
@@ -35,9 +36,12 @@ Sight Word Bingo combines the excitement of a classic game with sight word pract
 1. **Select Difficulty**: Choose grid size (3×3, 4×4, or 5×5)
 2. **Click "New Card"**: Generate your unique bingo card
 3. **Click "Call Word"**: Hear a word spoken aloud
-4. **Find the Word**: Look for that word on your card
-5. **Click to Mark**: Click the matching word to mark it
-6. **Get BINGO**: Complete a row, column, or diagonal to win!
+4. **Click "Repeat"**: Hear the word again if needed
+5. **Find the Word**: Look for that word on your card
+6. **Click to Mark**: Click the matching word to mark it
+7. **Get BINGO**: Complete a row, column, or diagonal to win!
+
+**Tip**: Check "Show Word" to see the word on screen, or leave it unchecked for audio-only practice.
 
 ### Game Modes
 
@@ -86,6 +90,8 @@ Bingo is effective for sight word instruction because:
 3. **Speed Round**: How many words can you mark in one minute?
 4. **Word Wall Match**: After winning, find bingo words on classroom word wall
 5. **Sentence Building**: Create sentences using the winning row of words
+6. **Listening Challenge**: Turn off "Show Word" for audio-only recognition practice
+7. **Repeat Practice**: Use the Repeat button to hear tricky words multiple times
 
 ### Assessment Opportunities
 
@@ -93,11 +99,13 @@ Bingo is effective for sight word instruction because:
 - Note which words students struggle to find
 - Track if students recognize words before seeing them on screen
 - Listen for students reading words aloud as they search
+- Use "Show Word" off to assess pure auditory word recognition
+- Monitor how often students use the Repeat button (indicates challenging words)
 
 ### Differentiation
 
-- **Support**: Use 3×3 grid; point to word location as hint
-- **Challenge**: 5×5 grid; require two bingos before celebrating
+- **Support**: Use 3×3 grid; enable "Show Word"; encourage use of Repeat button
+- **Challenge**: Use 5×5 grid with "Show Word" off for audio-only recognition
 
 ### Classroom Variations
 
