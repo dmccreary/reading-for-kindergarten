@@ -10,24 +10,28 @@ let canvasHeight = drawHeight + controlHeight;
 let margin = 10;
 
 // Letter-sound data (focusing on unambiguous mappings)
+// Audio files from Sound City Reading - clear phonics sounds for kids
 const letterSounds = {
-  'B': {sound: 'buh', hint: 'ball'},
-  'D': {sound: 'duh', hint: 'dog'},
-  'F': {sound: 'fff', hint: 'fish'},
-  'G': {sound: 'guh', hint: 'goat'},
-  'H': {sound: 'huh', hint: 'hat'},
-  'J': {sound: 'juh', hint: 'jump'},
-  'L': {sound: 'lll', hint: 'lion'},
-  'M': {sound: 'mmm', hint: 'mom'},
-  'N': {sound: 'nnn', hint: 'nose'},
-  'P': {sound: 'puh', hint: 'pig'},
-  'R': {sound: 'rrr', hint: 'run'},
-  'S': {sound: 'sss', hint: 'sun'},
-  'T': {sound: 'tuh', hint: 'top'},
-  'V': {sound: 'vvv', hint: 'van'},
-  'W': {sound: 'wuh', hint: 'water'},
-  'Z': {sound: 'zzz', hint: 'zebra'}
+  'B': {audioFile: 'audio/b.mp3', soundDisplay: '/b/', hint: 'ball'},
+  'D': {audioFile: 'audio/d.mp3', soundDisplay: '/d/', hint: 'dog'},
+  'F': {audioFile: 'audio/f.mp3', soundDisplay: '/f/', hint: 'fish'},
+  'G': {audioFile: 'audio/g.mp3', soundDisplay: '/g/', hint: 'goat'},
+  'H': {audioFile: 'audio/h.mp3', soundDisplay: '/h/', hint: 'hat'},
+  'J': {audioFile: 'audio/j.mp3', soundDisplay: '/j/', hint: 'jump'},
+  'L': {audioFile: 'audio/l.mp3', soundDisplay: '/l/', hint: 'lion'},
+  'M': {audioFile: 'audio/m.mp3', soundDisplay: '/m/', hint: 'mom'},
+  'N': {audioFile: 'audio/n.mp3', soundDisplay: '/n/', hint: 'nose'},
+  'P': {audioFile: 'audio/p.mp3', soundDisplay: '/p/', hint: 'pig'},
+  'R': {audioFile: 'audio/r.mp3', soundDisplay: '/r/', hint: 'run'},
+  'S': {audioFile: 'audio/s.mp3', soundDisplay: '/s/', hint: 'sun'},
+  'T': {audioFile: 'audio/t.mp3', soundDisplay: '/t/', hint: 'top'},
+  'V': {audioFile: 'audio/v.mp3', soundDisplay: '/v/', hint: 'van'},
+  'W': {audioFile: 'audio/w.mp3', soundDisplay: '/w/', hint: 'water'},
+  'Z': {audioFile: 'audio/z.mp3', soundDisplay: '/z/', hint: 'zebra'}
 };
+
+// Audio cache for preloaded sounds
+let audioCache = {};
 
 const letters = Object.keys(letterSounds);
 
@@ -43,6 +47,7 @@ let selectedLetter = null;
 let letterButtons = [];
 let particles = [];
 let showHint = false;
+let soundTimeout = null;
 
 // UI Elements
 let playSoundButton, hintButton, newGameButton;
@@ -52,9 +57,14 @@ function setup() {
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
+  // Preload all phoneme audio files
+  preloadAudio();
+
+  let buttonY = drawHeight + 8;
+
   // Create Play Sound button
   playSoundButton = createButton('Play Sound');
-  playSoundButton.position(margin, drawHeight + 12);
+  playSoundButton.position(margin, buttonY);
   playSoundButton.mousePressed(playTargetSound);
   playSoundButton.style('font-size', '14px');
   playSoundButton.style('padding', '8px 14px');
@@ -66,15 +76,15 @@ function setup() {
 
   // Create Hint button
   hintButton = createButton('Hint');
-  hintButton.position(margin + 110, drawHeight + 12);
+  hintButton.position(margin + 110, buttonY);
   hintButton.mousePressed(toggleHint);
   hintButton.style('font-size', '14px');
   hintButton.style('padding', '8px 14px');
   hintButton.style('cursor', 'pointer');
 
   // Create New Game button
-  newGameButton = createButton('New Game');
-  newGameButton.position(canvasWidth - 100, drawHeight + 12);
+  newGameButton = createButton('New Sound');
+  newGameButton.position(canvasWidth - 110, buttonY);
   newGameButton.mousePressed(startNewGame);
   newGameButton.style('font-size', '14px');
   newGameButton.style('padding', '8px 14px');
@@ -90,7 +100,7 @@ function draw() {
   updateCanvasSize();
 
   // Drawing area background
-  fill('#E8F5E9');
+  fill('aliceblue');
   stroke('silver');
   strokeWeight(1);
   rect(0, 0, canvasWidth, drawHeight);
@@ -251,7 +261,7 @@ function drawResult() {
 
     fill('white');
     textSize(16);
-    text('/' + letterSounds[targetLetter].sound + '/ is the ' + targetLetter + ' sound!', canvasWidth/2, 270);
+    text(letterSounds[targetLetter].soundDisplay + ' is the ' + targetLetter + ' sound!', canvasWidth/2, 270);
   } else {
     fill('#FF5722');
     textSize(24);
@@ -261,7 +271,7 @@ function drawResult() {
     fill('white');
     textSize(14);
     text('That was ' + selectedLetter + '. Listen again!', canvasWidth/2, 260);
-    text('The sound was /' + letterSounds[targetLetter].sound + '/', canvasWidth/2, 280);
+    text('The sound was ' + letterSounds[targetLetter].soundDisplay, canvasWidth/2, 280);
   }
 }
 
@@ -389,8 +399,9 @@ function nextRound() {
   // Select random target letter
   targetLetter = random(letters);
 
-  // Auto-play sound
-  setTimeout(playTargetSound, 500);
+  // Auto-play sound (clear any pending timeout first)
+  if (soundTimeout) clearTimeout(soundTimeout);
+  soundTimeout = setTimeout(playTargetSound, 500);
 }
 
 function showGameComplete() {
@@ -416,16 +427,40 @@ function showGameComplete() {
   playCelebrationSound();
 }
 
+function preloadAudio() {
+  // Preload all phoneme audio files into cache
+  for (let letter of letters) {
+    let audio = new Audio(letterSounds[letter].audioFile);
+    audio.preload = 'auto';
+    audioCache[letter] = audio;
+  }
+}
+
 function playTargetSound() {
-  if (!targetLetter || !('speechSynthesis' in window)) return;
+  if (!targetLetter) return;
 
-  speechSynthesis.cancel();
+  // Clear any pending timeout
+  if (soundTimeout) {
+    clearTimeout(soundTimeout);
+    soundTimeout = null;
+  }
 
-  let sound = letterSounds[targetLetter].sound;
-  let utterance = new SpeechSynthesisUtterance(sound);
-  utterance.rate = 0.6;
-  utterance.pitch = 1.0;
-  speechSynthesis.speak(utterance);
+  // Stop any currently playing audio
+  for (let letter of letters) {
+    if (audioCache[letter]) {
+      audioCache[letter].pause();
+      audioCache[letter].currentTime = 0;
+    }
+  }
+
+  // Play the target letter's phoneme sound
+  let audio = audioCache[targetLetter];
+  if (audio) {
+    audio.currentTime = 0;
+    audio.play().catch(e => {
+      console.log('Audio play failed:', e);
+    });
+  }
 }
 
 function toggleHint() {

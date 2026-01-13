@@ -13,7 +13,7 @@ let margin = 10;
 // soundText: what TTS will say; soundDisplay: what's shown on screen
 const consonantData = {
   'B': {soundText: 'buh', soundDisplay: '/b/', word: 'ball', emoji: '⚽', color: '#E74C3C'},
-  'C': {soundText: 'kuh', soundDisplay: '/k/', word: 'cat', emoji: '🐱', color: '#3498DB'},
+  'C': {soundText: 'kah', soundDisplay: '/k/', word: 'cat', emoji: '🐱', color: '#3498DB'},
   'D': {soundText: 'duh', soundDisplay: '/d/', word: 'dog', emoji: '🐕', color: '#2ECC71'},
   'F': {soundText: 'fuh', soundDisplay: '/f/', word: 'fish', emoji: '🐟', color: '#9B59B6'},
   'G': {soundText: 'guh', soundDisplay: '/g/', word: 'goat', emoji: '🐐', color: '#F39C12'},

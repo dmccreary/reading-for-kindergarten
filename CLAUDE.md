@@ -59,6 +59,11 @@ Each MicroSim lives in `docs/sims/<name>/` with:
 - `mkdocs.yml` - Site configuration, navigation, theme settings
 - `docs/css/extra.css` - Custom brand styling
 
+## MicroSim Styling
+
+- Primary background color: `aliceblue`
+- Alternative background color: `cornsilk`
+
 ## Speech Synthesis for Phonemes
 
 When using the Web Speech API (`speechSynthesis`) for letter sounds in MicroSims:
