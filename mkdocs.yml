@@ -182,7 +182,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 # Copyright
-copyright: Copyright &copy; 2025 Tara Gibbs. All rights reserved.
+copyright: Copyright &copy; 2025 Dan McCreary. All rights reserved.
 
 # Extra configuration
 extra:
