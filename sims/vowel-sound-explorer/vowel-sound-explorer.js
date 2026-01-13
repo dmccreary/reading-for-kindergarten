@@ -57,8 +57,9 @@ function setup() {
   canvas.parent(document.querySelector('main'));
 
   // Create Short Sounds button
+  let buttonY = drawHeight + 8;
   shortButton = createButton('Short Sounds');
-  shortButton.position(margin, drawHeight + 12);
+  shortButton.position(margin, buttonY);
   shortButton.mousePressed(() => setMode('short'));
   shortButton.style('font-size', '14px');
   shortButton.style('padding', '8px 12px');
@@ -66,7 +67,7 @@ function setup() {
 
   // Create Long Sounds button
   longButton = createButton('Long Sounds');
-  longButton.position(margin + 120, drawHeight + 12);
+  longButton.position(margin + 120, buttonY);
   longButton.mousePressed(() => setMode('long'));
   longButton.style('font-size', '14px');
   longButton.style('padding', '8px 12px');
@@ -74,7 +75,7 @@ function setup() {
 
   // Create Play Again button
   playButton = createButton('Hear Again');
-  playButton.position(canvasWidth - 105, drawHeight + 12);
+  playButton.position(canvasWidth - 105, buttonY);
   playButton.mousePressed(playAgain);
   playButton.style('font-size', '14px');
   playButton.style('padding', '8px 12px');
@@ -91,7 +92,7 @@ function draw() {
   updateCanvasSize();
 
   // Drawing area background - gradient effect
-  let bgColor = soundMode === 'short' ? '#FFF8E1' : '#E3F2FD';
+  let bgColor = soundMode === 'short' ? 'aliceblue' : 'cornsilk';
   fill(bgColor);
   stroke('silver');
   strokeWeight(1);

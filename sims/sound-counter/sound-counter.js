@@ -85,7 +85,7 @@ function setup() {
 
   // Create Speak Word button
   speakButton = createButton('Hear Word');
-  speakButton.position(margin, drawHeight + 15);
+  speakButton.position(margin, drawHeight + 12);
   speakButton.mousePressed(speakWord);
   speakButton.style('font-size', '16px');
   speakButton.style('padding', '8px 12px');
@@ -97,7 +97,7 @@ function setup() {
 
   // Create Check Answer button
   checkButton = createButton('Check');
-  checkButton.position(margin + 110, drawHeight + 15);
+  checkButton.position(margin + 110, drawHeight + 12);
   checkButton.mousePressed(checkAnswer);
   checkButton.style('font-size', '16px');
   checkButton.style('padding', '8px 12px');
@@ -105,7 +105,7 @@ function setup() {
 
   // Create New Word button
   newWordButton = createButton('New Word');
-  newWordButton.position(margin + 185, drawHeight + 15);
+  newWordButton.position(margin + 190, drawHeight + 12);
   newWordButton.mousePressed(newWord);
   newWordButton.style('font-size', '16px');
   newWordButton.style('padding', '8px 12px');
@@ -232,7 +232,7 @@ function drawTapArea() {
   fill('#333');
   textSize(18);
   textAlign(CENTER, TOP);
-  text('Taps: ' + tapCount, centerX, centerY + 70);
+  text('Taps: ' + tapCount, centerX, centerY + 110);
 }
 
 function drawStars() {
@@ -258,7 +258,7 @@ function drawStars() {
     textSize(14);
     textAlign(CENTER, CENTER);
     noStroke();
-    text('Stars will appear as you tap!', canvasWidth/2, y+50);
+    text('Stars will appear as you tap!', canvasWidth/2, y+70);
   }
 }
 
