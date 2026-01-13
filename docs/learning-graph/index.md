@@ -10,6 +10,8 @@ A learning graph is a structured representation of how concepts in a course rela
 - **Learning Pathways**: Multiple routes through the material
 - **Concept Categories**: How concepts are organized by type
 
+[View the Learning Graph](../sims/graph-viewer/main.html){ .md-button .md-button--primary }
+
 ## Learning Graph Overview
 
 The Reading for Kindergarten learning graph contains:
