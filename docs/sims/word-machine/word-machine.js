@@ -64,7 +64,7 @@ function setup() {
 
   // Create New Word button
   newWordButton = createButton('New Word');
-  newWordButton.position(canvasWidth - 90, drawHeight + 15);
+  newWordButton.position(canvasWidth - 110, drawHeight + 15);
   newWordButton.mousePressed(loadNewWord);
   newWordButton.style('font-size', '14px');
   newWordButton.style('padding', '8px 12px');
@@ -113,7 +113,7 @@ function draw() {
 
   // Reposition button on resize
   processButton.position(canvasWidth / 2 - 55, drawHeight + 15);
-  newWordButton.position(canvasWidth - 90, drawHeight + 15);
+  newWordButton.position(canvasWidth - 110, drawHeight + 15);
 }
 
 function drawProgress() {
