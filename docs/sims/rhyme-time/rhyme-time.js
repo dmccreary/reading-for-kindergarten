@@ -53,7 +53,7 @@ function setup() {
 
   // Create New Game button
   newGameButton = createButton('New Game');
-  newGameButton.position(margin, drawHeight + 12);
+  newGameButton.position(margin, drawHeight + 8);
   newGameButton.mousePressed(startNewGame);
   newGameButton.style('font-size', '16px');
   newGameButton.style('padding', '8px 16px');
@@ -160,10 +160,12 @@ function drawCard(card, x, y) {
   push();
   translate(x + cardWidth/2, y + cardHeight/2 - bounce);
 
-  // Card shadow
+  // Card Drop shadow
+  push();
   fill(0, 0, 0, 30);
   noStroke();
-  rect(-cardWidth/2 * scale + 4, 4, cardWidth * scale, cardHeight * scale, 12);
+  rect(-cardWidth/2 * scale + 8, -cardHeight/2 * scale + 8, cardWidth * scale, cardHeight * scale, 12);
+  pop();
 
   // Card background
   if (isSelected) {
