@@ -3,7 +3,7 @@
 
 site_name: 'Reading for Kindergarten'
 site_description: 'An intelligent textbook for teaching reading skills to kindergarten students'
-site_author: 'Tara Gibbs'
+site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/reading-for-kindergarten/'
 repo_url: 'https://github.com/dmccreary/reading-for-kindergarten'
@@ -137,7 +137,6 @@ markdown_extensions:
   - attr_list                    # Add HTML attributes to elements
   - def_list                     # Definition lists
   - footnotes                    # Footnotes support
-  - tables                       # Tables support
   - abbr                         # Abbreviations with tooltips
   - toc:
       permalink: true            # Anchor links for headings
