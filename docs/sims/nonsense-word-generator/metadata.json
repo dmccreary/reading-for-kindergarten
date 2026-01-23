@@ -2,7 +2,12 @@
   "title": "Nonsense Word Generator",
   "description": "Generate and decode made-up CVC words to practice pure phonics decoding skills without relying on word memorization or picture clues.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Phonics", "Decoding", "Nonsense Words"],
+  "subject": [
+    "Reading",
+    "Phonics",
+    "Decoding",
+    "Nonsense Words"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,22 @@
     "Decode unfamiliar CVC combinations using phonics",
     "Identify which sounds are difficult"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "5-15 minutes",
   "prerequisites": "Knowledge of consonant and vowel sounds",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 460",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -47,7 +61,11 @@
     }
   ],
   "modelType": "Educational Tool",
-  "variables": ["currentWord", "blendStep", "wordsDecoded"],
+  "variables": [
+    "currentWord",
+    "blendStep",
+    "wordsDecoded"
+  ],
   "assumptions": [
     "User knows basic letter sounds",
     "Browser supports Web Speech API",
@@ -57,5 +75,12 @@
     "Limited to CVC pattern only",
     "Speech synthesis pronunciation may vary",
     "Some generated words may sound real but are filtered"
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
   ]
 }

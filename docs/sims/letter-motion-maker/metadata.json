@@ -2,7 +2,12 @@
   "title": "Letter Motion Maker",
   "description": "A kinesthetic learning MicroSim where children make body movements that match letter shapes, supporting physical learners and adding movement breaks to literacy instruction.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Letter Recognition", "Kinesthetic Learning", "Movement"],
+  "subject": [
+    "Reading",
+    "Letter Recognition",
+    "Kinesthetic Learning",
+    "Movement"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,22 @@
     "Perform movements that represent letter shapes",
     "Combine movements to spell simple words"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Create"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Create"
+  ],
   "duration": "5-15 minutes",
   "prerequisites": "None - supports letter learning",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 510",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -52,7 +66,11 @@
     }
   ],
   "modelType": "Educational Activity",
-  "variables": ["currentIndex", "showDemo", "practiceCount"],
+  "variables": [
+    "currentIndex",
+    "showDemo",
+    "practiceCount"
+  ],
   "assumptions": [
     "User has space to move",
     "Browser supports Web Speech API",
@@ -62,5 +80,12 @@
     "Cannot verify correct movement execution",
     "Requires physical space and ability to move",
     "Some motions may need modification for accessibility"
+  ],
+  "visualizationType": [
+    "animation",
+    "graph",
+    "interactive-demo",
+    "network",
+    "simulation"
   ]
 }

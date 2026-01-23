@@ -2,7 +2,11 @@
   "title": "Letter Matching Game",
   "description": "An interactive game where kindergarten students match uppercase letters to their lowercase partners to build letter recognition skills.",
   "creator": "Dan McCreary",
-  "subject": ["Reading", "Letter Recognition", "Phonics"],
+  "subject": [
+    "Reading",
+    "Letter Recognition",
+    "Phonics"
+  ],
   "date": "2025-12-04",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,7 +21,11 @@
       "Match uppercase letters to their lowercase counterparts",
       "Build visual discrimination skills for letter forms"
     ],
-    "bloomsTaxonomy": ["Remember", "Understand", "Apply"],
+    "bloomsTaxonomy": [
+      "Remember",
+      "Understand",
+      "Apply"
+    ],
     "duration": "5-15 minutes",
     "prerequisites": "None - designed for beginning readers"
   },
@@ -25,8 +33,14 @@
     "framework": "p5.js",
     "canvasDimensions": "400x500 (initial)",
     "responsive": "Width-responsive",
-    "dependencies": ["p5.js CDN"],
-    "accessibility": ["Mouse/touch interaction", "High contrast colors", "Large text"]
+    "dependencies": [
+      "p5.js CDN"
+    ],
+    "accessibility": [
+      "Mouse/touch interaction",
+      "High contrast colors",
+      "Large text"
+    ]
   },
   "controls": [
     {
@@ -46,7 +60,31 @@
   ],
   "simulation": {
     "modelType": "Educational game",
-    "variables": ["score", "attempts", "matchedPairs", "selectedCard"],
+    "variables": [
+      "score",
+      "attempts",
+      "matchedPairs",
+      "selectedCard"
+    ],
     "assumptions": "Uses first 8 letters of alphabet (A-H) for manageable game size"
-  }
+  },
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of letter matching game",
+    "Explore letter matching game through interactive visualization",
+    "Apply knowledge of letter matching game to solve problems",
+    "Experiment with parameters to observe their effects on letter matching game"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Evaluate",
+    "Create"
+  ]
 }

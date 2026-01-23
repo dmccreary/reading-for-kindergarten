@@ -2,7 +2,12 @@
   "title": "Sight Word Memory",
   "description": "A classic memory matching game for practicing high-frequency sight words with audio pronunciation and three difficulty levels for kindergarten learners.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Sight Words", "Memory", "High-Frequency Words"],
+  "subject": [
+    "Reading",
+    "Sight Words",
+    "Memory",
+    "High-Frequency Words"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,22 @@
     "Use visual memory strategies to locate matching words",
     "Track own progress and learning"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Evaluate"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Evaluate"
+  ],
   "duration": "5-15 minutes",
   "prerequisites": "None - builds recognition through exposure",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 510",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -47,7 +61,13 @@
     }
   ],
   "modelType": "Educational Game",
-  "variables": ["cards", "flippedCards", "matchedPairs", "attempts", "gameWon"],
+  "variables": [
+    "cards",
+    "flippedCards",
+    "matchedPairs",
+    "attempts",
+    "gameWon"
+  ],
   "assumptions": [
     "User can click/tap cards",
     "Browser supports Web Speech API",
@@ -57,5 +77,12 @@
     "Pool limited to 32 Dolch words",
     "Progress not saved between sessions",
     "May be challenging for children with memory difficulties"
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
   ]
 }

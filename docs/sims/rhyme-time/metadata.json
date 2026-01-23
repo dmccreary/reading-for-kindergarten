@@ -2,7 +2,11 @@
   "title": "Rhyme Time",
   "description": "An interactive matching game where kindergarten students match rhyming word pairs, developing phonemic awareness and rhyme recognition skills essential for early reading.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Phonemic Awareness", "Rhyme Recognition"],
+  "subject": [
+    "Reading",
+    "Phonemic Awareness",
+    "Rhyme Recognition"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +21,22 @@
     "Develop phonemic awareness through rhyme",
     "Connect visual images with rhyming words"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "5-10 minutes",
   "prerequisites": "Basic understanding of rhyming words",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 470",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -42,7 +55,12 @@
     }
   ],
   "modelType": "Educational Game",
-  "variables": ["cards", "selectedCard", "matchedPairs", "attempts"],
+  "variables": [
+    "cards",
+    "selectedCard",
+    "matchedPairs",
+    "attempts"
+  ],
   "assumptions": [
     "User has mouse or touchscreen input",
     "Browser supports Web Speech API for audio",
@@ -52,5 +70,12 @@
     "Limited to 15 preset rhyming pairs",
     "Regional accents may affect rhyme perception",
     "Requires vocabulary knowledge to recognize pictures"
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
   ]
 }

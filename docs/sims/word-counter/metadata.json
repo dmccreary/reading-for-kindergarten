@@ -2,7 +2,11 @@
   "title": "Word Counter",
   "description": "An interactive MicroSim where kindergarten students count words in sentences by tapping once per word, developing the concept of word and one-to-one correspondence.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Phonemic Awareness", "Concept of Word"],
+  "subject": [
+    "Reading",
+    "Phonemic Awareness",
+    "Concept of Word"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +21,22 @@
     "Develop one-to-one correspondence between spoken and written words",
     "Identify word boundaries in continuous speech"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "5-10 minutes",
   "prerequisites": "Basic understanding of spoken sentences",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 480",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -52,7 +65,12 @@
     }
   ],
   "modelType": "Educational Game",
-  "variables": ["currentSentence", "tapCount", "blocks", "difficulty"],
+  "variables": [
+    "currentSentence",
+    "tapCount",
+    "blocks",
+    "difficulty"
+  ],
   "assumptions": [
     "User has mouse or touchscreen input",
     "Browser supports Web Speech API for audio",
@@ -62,5 +80,10 @@
     "Young children may count syllables instead of words",
     "Connected speech makes word boundaries less obvious",
     "Contractions and compound words may confuse learners"
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "simulation"
   ]
 }

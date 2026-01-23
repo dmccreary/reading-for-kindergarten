@@ -2,7 +2,11 @@
   "title": "Sound Counter",
   "description": "An interactive MicroSim where kindergarten students count phonemes in spoken words by tapping for each sound heard, developing phoneme segmentation skills essential for reading.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Phonemic Awareness", "Phoneme Segmentation"],
+  "subject": [
+    "Reading",
+    "Phonemic Awareness",
+    "Phoneme Segmentation"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +21,22 @@
     "Distinguish between letters and sounds",
     "Segment CVC words into individual phonemes"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "5-10 minutes",
   "prerequisites": "Basic understanding that words have sounds",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 460",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -52,7 +65,12 @@
     }
   ],
   "modelType": "Educational Game",
-  "variables": ["currentWord", "tapCount", "difficulty", "showResult"],
+  "variables": [
+    "currentWord",
+    "tapCount",
+    "difficulty",
+    "showResult"
+  ],
   "assumptions": [
     "User has mouse or touchscreen input",
     "Browser supports Web Speech API for audio",
@@ -62,5 +80,12 @@
     "Phoneme counts based on standard pronunciation",
     "Some regional accents may affect phoneme perception",
     "Abstract concept may require explicit instruction"
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
   ]
 }

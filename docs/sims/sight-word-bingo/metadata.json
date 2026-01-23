@@ -2,7 +2,12 @@
   "title": "Sight Word Bingo",
   "description": "An interactive bingo game where kindergarteners listen to spoken sight words and mark them on their card, combining auditory and visual word recognition practice.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Sight Words", "Bingo", "Auditory Learning"],
+  "subject": [
+    "Reading",
+    "Sight Words",
+    "Bingo",
+    "Auditory Learning"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,22 @@
     "Quickly scan and locate specific words in a grid",
     "Use pattern recognition for winning combinations"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "5-15 minutes",
   "prerequisites": "Basic familiarity with sight words helpful but not required",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 540",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -52,7 +66,13 @@
     }
   ],
   "modelType": "Educational Game",
-  "variables": ["bingoCard", "markedCells", "calledWords", "currentWord", "gameWon"],
+  "variables": [
+    "bingoCard",
+    "markedCells",
+    "calledWords",
+    "currentWord",
+    "gameWon"
+  ],
   "assumptions": [
     "User can click/tap grid cells",
     "Browser supports Web Speech API",
@@ -62,5 +82,12 @@
     "Pool limited to 48 Dolch words",
     "Single player only (no multiplayer)",
     "Requires audio for full experience"
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
   ]
 }

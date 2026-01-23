@@ -2,7 +2,12 @@
   "title": "Word Machine",
   "description": "A fun factory-themed MicroSim where children load sounds into a machine and watch gears spin as the sounds blend into a word, making phonics concrete and engaging.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Phonics", "Blending", "Gamification"],
+  "subject": [
+    "Reading",
+    "Phonics",
+    "Blending",
+    "Gamification"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,22 @@
     "Load sounds in correct order to build words",
     "Build multiple words using the machine metaphor"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Create"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Create"
+  ],
   "duration": "5-15 minutes",
   "prerequisites": "Basic letter sound knowledge",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 480",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -47,7 +61,12 @@
     }
   ],
   "modelType": "Educational Game",
-  "variables": ["machineState", "loadedSounds", "animationFrame", "wordsBuilt"],
+  "variables": [
+    "machineState",
+    "loadedSounds",
+    "animationFrame",
+    "wordsBuilt"
+  ],
   "assumptions": [
     "User can click hoppers and buttons",
     "Browser supports Web Speech API",
@@ -57,5 +76,12 @@
     "Limited to CVC pattern words",
     "Animation timing is fixed",
     "May be overwhelming for some learners"
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
   ]
 }

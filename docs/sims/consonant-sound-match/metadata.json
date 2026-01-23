@@ -2,7 +2,11 @@
   "title": "Consonant Sound Match",
   "description": "An interactive MicroSim where kindergarten students click consonant letters to hear their primary sounds with example words and pictures, building systematic letter-sound knowledge.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Phonics", "Letter-Sound Correspondence"],
+  "subject": [
+    "Reading",
+    "Phonics",
+    "Letter-Sound Correspondence"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +21,21 @@
     "Connect letter shapes with their sounds",
     "Build letter-sound automaticity through exploration"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply"
+  ],
   "duration": "5-10 minutes",
   "prerequisites": "Letter recognition (knowing letter names)",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 450",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -42,7 +54,10 @@
     }
   ],
   "modelType": "Educational Explorer",
-  "variables": ["selectedLetter", "animatingLetter"],
+  "variables": [
+    "selectedLetter",
+    "animatingLetter"
+  ],
   "assumptions": [
     "User has mouse or touchscreen input",
     "Browser supports Web Speech API",
@@ -52,5 +67,10 @@
     "Only covers primary sound for each consonant",
     "Some consonants have multiple sounds not covered",
     "Speech synthesis quality varies by browser"
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "network"
   ]
 }
