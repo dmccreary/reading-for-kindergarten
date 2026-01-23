@@ -1,0 +1,46 @@
+{
+  "title": "Learning Graph Viewer",
+  "description": "<iframe src=\"./main.html\" width=\"100%\" height=\"600px\" style=\"border:1px solid silver;\"></iframe>",
+  "subject": "Mathematics",
+  "topic": "Learning Graph Viewer",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "vis-network",
+  "url": "https://dmccreary.github.io/reading-for-kindergarten/sims/graph-viewer/",
+  "identifier": "https://dmccreary.github.io/reading-for-kindergarten/sims/graph-viewer/",
+  "_source": {
+    "repo": "reading-for-kindergarten",
+    "sim": "graph-viewer",
+    "github_url": "https://github.com/dmccreary/reading-for-kindergarten/tree/main/docs/sims/graph-viewer",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Physics",
+    "Computer Science",
+    "Chemistry",
+    "Biology",
+    "Statistics",
+    "Engineering"
+  ],
+  "visualizationType": [
+    "animation",
+    "simulation",
+    "chart",
+    "graph",
+    "network",
+    "map"
+  ]
+}
