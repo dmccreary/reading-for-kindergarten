@@ -85,5 +85,29 @@
   "visualizationType": [
     "interactive-demo",
     "simulation"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "guided-discovery",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "explain",
+      "apply",
+      "calculate",
+      "illustrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

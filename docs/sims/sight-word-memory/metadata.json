@@ -84,5 +84,30 @@
     "map",
     "network",
     "simulation"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "practice",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "explain",
+      "apply",
+      "calculate",
+      "use"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "delayed",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

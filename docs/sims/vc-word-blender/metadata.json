@@ -80,5 +80,28 @@
     "animation",
     "interactive-demo",
     "map"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "worked-example",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "describe",
+      "explain",
+      "apply",
+      "calculate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

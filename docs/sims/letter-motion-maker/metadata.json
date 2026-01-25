@@ -87,5 +87,29 @@
     "interactive-demo",
     "network",
     "simulation"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "practice",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "explain",
+      "apply",
+      "demonstrate",
+      "use"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

@@ -127,5 +127,28 @@
     "Understand",
     "Apply",
     "Create"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "implement",
+      "use",
+      "assess",
+      "critique"
+    ],
+    "pacing": "continuous",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }
