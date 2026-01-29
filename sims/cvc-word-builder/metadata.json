@@ -2,7 +2,12 @@
   "title": "CVC Word Builder",
   "description": "An interactive MicroSim where kindergarten students drag letters to build consonant-vowel-consonant words with audio blending support, developing core decoding skills.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Phonics", "Blending", "Decoding"],
+  "subject": [
+    "Reading",
+    "Phonics",
+    "Blending",
+    "Decoding"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,22 @@
     "Blend individual sounds to form words",
     "Connect letter sounds to word meaning"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "5-15 minutes",
   "prerequisites": "Knowledge of consonant and vowel sounds",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 470",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -52,7 +66,12 @@
     }
   ],
   "modelType": "Educational Game",
-  "variables": ["targetWord", "slots", "letterTiles", "wordComplete"],
+  "variables": [
+    "targetWord",
+    "slots",
+    "letterTiles",
+    "wordComplete"
+  ],
   "assumptions": [
     "User can drag and drop with mouse or touch",
     "Browser supports Web Speech API",
@@ -62,5 +81,33 @@
     "Limited to CVC pattern words",
     "Blending concept may require scaffolding",
     "Some words have multiple valid spellings not covered"
-  ]
+  ],
+  "visualizationType": [
+    "interactive-demo",
+    "simulation"
+  ],
+  "pedagogical": {
+    "pattern": "guided-discovery",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "explain",
+      "apply",
+      "calculate",
+      "illustrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

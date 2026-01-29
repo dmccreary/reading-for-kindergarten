@@ -2,7 +2,12 @@
   "title": "Sound Slider",
   "description": "Drag a slider to blend sounds into words, giving children kinesthetic control over the blending process and making abstract phonics concepts concrete.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Phonics", "Blending", "Kinesthetic Learning"],
+  "subject": [
+    "Reading",
+    "Phonics",
+    "Blending",
+    "Kinesthetic Learning"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,22 @@
     "Control blending pace to decode words",
     "Compare slow segmented sounds to smooth blending"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "5-10 minutes",
   "prerequisites": "Familiarity with letter sounds",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 460",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -47,7 +61,12 @@
     }
   ],
   "modelType": "Educational Visualization",
-  "variables": ["sliderValue", "currentWordIndex", "lastSoundPlayed", "isComplete"],
+  "variables": [
+    "sliderValue",
+    "currentWordIndex",
+    "lastSoundPlayed",
+    "isComplete"
+  ],
   "assumptions": [
     "User can drag slider with mouse or touch",
     "Browser supports Web Speech API",
@@ -57,5 +76,36 @@
     "Limited to CVC pattern words",
     "Slider precision may vary on touch devices",
     "Speech synthesis timing may vary by browser"
-  ]
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "pedagogical": {
+    "pattern": "guided-discovery",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "explain",
+      "apply",
+      "calculate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "manipulate"
+  }
 }

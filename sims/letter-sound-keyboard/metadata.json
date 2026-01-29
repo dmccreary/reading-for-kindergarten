@@ -2,7 +2,12 @@
   "title": "Letter Sound Keyboard",
   "description": "A virtual keyboard MicroSim that plays letter sounds when keys are pressed, encouraging playful exploration of letter-sound relationships for kindergarten students.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Phonics", "Letter Sounds", "Keyboard Skills"],
+  "subject": [
+    "Reading",
+    "Phonics",
+    "Letter Sounds",
+    "Keyboard Skills"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,22 @@
     "Build letter-sound familiarity through repetition",
     "Connect letters with their sounds"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Create"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Create"
+  ],
   "duration": "5-15 minutes",
   "prerequisites": "Basic letter recognition",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 430",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -48,7 +62,11 @@
     }
   ],
   "modelType": "Educational Explorer",
-  "variables": ["layoutMode", "lastPlayedLetter", "showPicture"],
+  "variables": [
+    "layoutMode",
+    "lastPlayedLetter",
+    "showPicture"
+  ],
   "assumptions": [
     "User has mouse, touchscreen, or physical keyboard",
     "Browser supports Web Speech API",
@@ -58,5 +76,36 @@
     "Random exploration may not build systematic knowledge",
     "Speech synthesis quality varies by browser",
     "Some letters have multiple sounds (only primary shown)"
-  ]
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "apply",
+      "calculate",
+      "illustrate",
+      "implement"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

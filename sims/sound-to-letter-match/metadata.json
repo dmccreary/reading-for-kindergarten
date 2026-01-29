@@ -2,7 +2,11 @@
   "title": "Sound-to-Letter Match",
   "description": "An interactive MicroSim where kindergarten students hear a sound and find the letter that makes it, strengthening bidirectional letter-sound connections essential for spelling and reading.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Phonics", "Sound-to-Letter Correspondence"],
+  "subject": [
+    "Reading",
+    "Phonics",
+    "Sound-to-Letter Correspondence"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +21,22 @@
     "Build encoding skills for spelling",
     "Distinguish between similar consonant sounds"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "5-10 minutes",
   "prerequisites": "Familiarity with consonant letter sounds",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 470",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -52,7 +65,12 @@
     }
   ],
   "modelType": "Educational Game",
-  "variables": ["targetLetter", "score", "round", "showHint"],
+  "variables": [
+    "targetLetter",
+    "score",
+    "round",
+    "showHint"
+  ],
   "assumptions": [
     "User has mouse or touchscreen input",
     "Browser supports Web Speech API",
@@ -62,5 +80,35 @@
     "Limited to consonants with unambiguous mappings",
     "Speech synthesis quality varies by browser",
     "Some sounds map to multiple letters (not covered)"
-  ]
+  ],
+  "visualizationType": [
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "explain",
+      "apply",
+      "calculate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

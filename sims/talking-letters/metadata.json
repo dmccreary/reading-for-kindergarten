@@ -2,7 +2,12 @@
   "title": "Talking Letters",
   "description": "An interactive alphabet where kindergarten students click on letters to hear them spoken aloud using the Web Speech API.",
   "creator": "Dan McCreary",
-  "subject": ["Reading", "Letter Recognition", "Phonics", "Alphabet"],
+  "subject": [
+    "Reading",
+    "Letter Recognition",
+    "Phonics",
+    "Alphabet"
+  ],
   "date": "2025-12-05",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,7 +22,10 @@
       "Associate the visual shape of each letter with its spoken name",
       "Understand the difference between uppercase and lowercase letter forms"
     ],
-    "bloomsTaxonomy": ["Remember", "Understand"],
+    "bloomsTaxonomy": [
+      "Remember",
+      "Understand"
+    ],
     "duration": "5-15 minutes",
     "prerequisites": "None - designed for beginning readers"
   },
@@ -25,8 +33,16 @@
     "framework": "p5.js",
     "canvasDimensions": "400x450 (initial)",
     "responsive": "Width-responsive",
-    "dependencies": ["p5.js CDN", "Web Speech API (browser built-in)"],
-    "accessibility": ["Mouse/touch interaction", "Audio output", "High contrast colors", "Large text"]
+    "dependencies": [
+      "p5.js CDN",
+      "Web Speech API (browser built-in)"
+    ],
+    "accessibility": [
+      "Mouse/touch interaction",
+      "Audio output",
+      "High contrast colors",
+      "Large text"
+    ]
   },
   "controls": [
     {
@@ -42,7 +58,54 @@
   ],
   "simulation": {
     "modelType": "Interactive learning tool",
-    "variables": ["selectedLetter", "speakingLetter", "showLowercase"],
+    "variables": [
+      "selectedLetter",
+      "speakingLetter",
+      "showLowercase"
+    ],
     "assumptions": "Uses browser default voice for text-to-speech"
+  },
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of talking letters",
+    "Explore talking letters through interactive visualization",
+    "Apply knowledge of talking letters to solve problems",
+    "Experiment with parameters to observe their effects on talking letters"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "explain",
+      "apply",
+      "calculate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "respond"
   }
 }

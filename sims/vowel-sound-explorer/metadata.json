@@ -2,7 +2,11 @@
   "title": "Vowel Sound Explorer",
   "description": "An interactive MicroSim showing short and long vowel sounds with example words and pictures, helping kindergarten students understand that vowels can make different sounds.",
   "creator": "Claude AI",
-  "subject": ["Reading", "Phonics", "Vowel Sounds"],
+  "subject": [
+    "Reading",
+    "Phonics",
+    "Vowel Sounds"
+  ],
   "date": "2026-01-12",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +21,22 @@
     "Associate vowel sounds with example words",
     "Recognize breve and macron notation for vowel sounds"
   ],
-  "bloomsTaxonomy": ["Remember", "Understand", "Apply", "Analyze"],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "5-10 minutes",
   "prerequisites": "Recognition of vowel letters A, E, I, O, U",
   "framework": "p5.js",
   "canvasDimensions": "responsive x 470",
   "responsive": true,
-  "dependencies": ["p5.js CDN", "Web Speech API", "Web Audio API"],
+  "dependencies": [
+    "p5.js CDN",
+    "Web Speech API",
+    "Web Audio API"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "touchSupport": true,
@@ -52,7 +65,10 @@
     }
   ],
   "modelType": "Educational Explorer",
-  "variables": ["selectedVowel", "soundMode"],
+  "variables": [
+    "selectedVowel",
+    "soundMode"
+  ],
   "assumptions": [
     "User has mouse or touchscreen input",
     "Browser supports Web Speech API",
@@ -62,5 +78,34 @@
     "Simplified to two sounds per vowel (actual vowels have more variations)",
     "Speech synthesis quality varies by browser",
     "Long vowel explanation may require teacher scaffolding"
-  ]
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "simulation"
+  ],
+  "pedagogical": {
+    "pattern": "exploration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "explain",
+      "apply",
+      "calculate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

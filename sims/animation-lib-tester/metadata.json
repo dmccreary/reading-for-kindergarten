@@ -2,7 +2,12 @@
   "title": "Animation Library Tester",
   "description": "A testbed demonstrating the shared animation library modules. Unlike the monolithic celebration-animation-tester, this version imports each animation as a separate reusable JavaScript module.",
   "creator": "Claude AI",
-  "subject": ["Animation", "Educational Technology", "Modular Design", "Code Reuse"],
+  "subject": [
+    "Animation",
+    "Educational Technology",
+    "Modular Design",
+    "Code Reuse"
+  ],
   "date": "2025-12-05",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -16,9 +21,14 @@
     "Show how to import and use shared animation modules",
     "Provide example of code reuse patterns"
   ],
-  "bloomsTaxonomyLevels": ["Apply", "Create"],
+  "bloomsTaxonomyLevels": [
+    "Apply",
+    "Create"
+  ],
   "duration": "2-5 minutes",
-  "prerequisites": ["None for viewing; JavaScript knowledge for code reuse"],
+  "prerequisites": [
+    "None for viewing; JavaScript knowledge for code reuse"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 470",
   "responsive": "Width-responsive",
@@ -38,7 +48,10 @@
     "shared/animations/reading-rocket-zoom.js",
     "shared/animations/celebration-sounds.js"
   ],
-  "accessibility": ["High contrast colors", "Audio feedback"],
+  "accessibility": [
+    "High contrast colors",
+    "Audio feedback"
+  ],
   "controls": [
     {
       "type": "dropdown",
@@ -63,7 +76,11 @@
       "type": "dropdown",
       "name": "speedSelect",
       "description": "Control animation speed",
-      "options": ["Fast", "Medium", "Slow"],
+      "options": [
+        "Fast",
+        "Medium",
+        "Slow"
+      ],
       "default": "Medium"
     },
     {
@@ -85,5 +102,41 @@
   ],
   "relatedMicrosims": [
     "celebration-animation-tester"
-  ]
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "remember",
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "identify",
+      "recognize",
+      "compare",
+      "describe",
+      "explain"
+    ],
+    "pacing": "continuous",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "observe"
+  }
 }

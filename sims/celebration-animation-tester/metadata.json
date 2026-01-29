@@ -2,7 +2,12 @@
   "title": "Celebration Animation Tester",
   "description": "A testbed showcasing 10 different celebration animations designed to reward student achievements in educational MicroSims. Animations include stars, sparkles, confetti, balloons, rockets, and more.",
   "creator": "Claude AI",
-  "subject": ["Animation", "Educational Technology", "Gamification", "UI/UX"],
+  "subject": [
+    "Animation",
+    "Educational Technology",
+    "Gamification",
+    "UI/UX"
+  ],
   "date": "2025-12-05",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -16,14 +21,25 @@
     "Provide reusable animation code for other MicroSims",
     "Showcase particle system techniques in p5.js"
   ],
-  "bloomsTaxonomyLevels": ["Apply", "Create"],
+  "bloomsTaxonomyLevels": [
+    "Apply",
+    "Create"
+  ],
   "duration": "2-5 minutes",
-  "prerequisites": ["None for viewing; JavaScript knowledge for code reuse"],
+  "prerequisites": [
+    "None for viewing; JavaScript knowledge for code reuse"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 470",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10 CDN", "Web Audio API"],
-  "accessibility": ["High contrast colors", "Audio feedback"],
+  "dependencies": [
+    "p5.js 1.11.10 CDN",
+    "Web Audio API"
+  ],
+  "accessibility": [
+    "High contrast colors",
+    "Audio feedback"
+  ],
   "controls": [
     {
       "type": "dropdown",
@@ -99,5 +115,40 @@
   "limitations": [
     "Development/testing tool, not a learning activity itself",
     "Performance may vary on older devices with many particles"
-  ]
+  ],
+  "visualizationType": [
+    "3d-model",
+    "animation",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "implement",
+      "use",
+      "assess",
+      "critique"
+    ],
+    "pacing": "continuous",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }
