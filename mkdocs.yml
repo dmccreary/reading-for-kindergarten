@@ -187,6 +187,9 @@ copyright: Copyright &copy; 2025 Dan McCreary. All rights reserved.
 
 # Extra configuration
 extra:
+  schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
+  textbook_name: Reading for Kindergarten
+  textbook_version: "1.0"
   generator: false               # Hide "Made with Material" footer
   
   # Google Analytics
